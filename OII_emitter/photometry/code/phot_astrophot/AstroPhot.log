@@ -1,0 +1,646 @@
+2023-10-22 18:00:08,634:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-22 18:00:08,984:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 18:00:08,995:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 18:00:09,051:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 18:00:09,054:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-22 18:00:09,075:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-22 18:00:09,111:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-22 18:00:09,259:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-22 18:00:09,275:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-22 18:07:26,980:WARNING: Assuming pixelscale of 1! To remove this message please provide the pixelscale explicitly
+2023-10-22 18:12:29,931:WARNING: Assuming pixelscale of 1! To remove this message please provide the pixelscale explicitly
+2023-10-22 18:31:33,741:WARNING: Assuming pixelscale of 1! To remove this message please provide the pixelscale explicitly
+2023-10-22 18:45:01,419:WARNING: Assuming pixelscale of 1! To remove this message please provide the pixelscale explicitly
+2023-10-22 18:45:01,422:WARNING: Assuming pixelscale of 1! To remove this message please provide the pixelscale explicitly
+2023-10-22 18:45:01,424:WARNING: Assuming pixelscale of 1! To remove this message please provide the pixelscale explicitly
+2023-10-22 18:45:01,425:WARNING: Assuming pixelscale of 1! To remove this message please provide the pixelscale explicitly
+2023-10-22 19:10:46,080:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-22 19:10:46,080:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-22 19:10:46,081:INFO: NumExpr defaulting to 8 threads.
+2023-10-22 19:11:00,034:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-22 19:11:00,382:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:11:00,394:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:11:00,450:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:11:00,454:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-22 19:11:00,477:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-22 19:11:00,512:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-22 19:11:00,533:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-22 19:11:00,550:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-22 19:14:44,219:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-22 19:14:44,220:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-22 19:14:44,220:INFO: NumExpr defaulting to 8 threads.
+2023-10-22 19:14:46,600:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-22 19:14:46,953:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:14:46,965:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:14:47,022:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:14:47,027:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-22 19:14:47,049:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-22 19:14:47,085:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-22 19:14:47,107:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-22 19:14:47,123:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-22 19:17:33,445:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-22 19:17:33,446:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-22 19:17:33,446:INFO: NumExpr defaulting to 8 threads.
+2023-10-22 19:17:36,318:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-22 19:17:36,679:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:17:36,692:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:17:36,749:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-22 19:17:36,754:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-22 19:17:36,776:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-22 19:17:36,813:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-22 19:17:36,835:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-22 19:17:36,851:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-22 20:05:07,066:INFO: Chi^2: inf, L: 1.0
+2023-10-22 20:05:08,743:WARNING: Could not find step to improve Chi^2, stopping
+2023-10-22 20:05:08,745:INFO: Final Chi^2: inf, L: 1.0. Converged: fail. Could not find step to improve Chi^2
+2023-10-22 20:05:08,747:WARNING: Getting optimizer res with no real loss history, using current state
+2023-10-22 20:08:12,649:INFO: Chi^2: inf, L: 1.0
+2023-10-22 20:08:16,139:WARNING: Could not find step to improve Chi^2, stopping
+2023-10-22 20:08:16,141:INFO: Final Chi^2: inf, L: 1.0. Converged: fail. Could not find step to improve Chi^2
+2023-10-22 20:08:16,142:WARNING: Getting optimizer res with no real loss history, using current state
+2023-10-22 20:15:07,892:INFO: Chi^2: 0.4367266878641884, L: 1.0
+2023-10-22 20:15:08,570:INFO: Chi^2: 0.3046428692080248, L: 0.3333333333333333
+2023-10-22 20:15:09,439:INFO: Chi^2: 0.2642741510211871, L: 0.5555555555555555
+2023-10-22 20:15:10,263:INFO: Chi^2: 0.23654916461362788, L: 0.9259259259259257
+2023-10-22 20:15:11,096:INFO: Chi^2: 0.15111803975601618, L: 1.5432098765432096
+2023-10-22 20:15:11,893:INFO: Chi^2: 0.1172286440838786, L: 0.1714677640603566
+2023-10-22 20:15:13,130:INFO: Chi^2: 0.11722664080275028, L: 35.72245084590762
+2023-10-22 20:15:14,001:INFO: Chi^2: 0.11699322549227802, L: 11.90748361530254
+2023-10-22 20:15:14,870:INFO: Chi^2: 0.11697237842568924, L: 19.845806025504235
+2023-10-22 20:15:15,750:INFO: Chi^2: 0.11696962368783066, L: 33.07634337584039
+2023-10-22 20:15:16,604:INFO: Chi^2: 0.11651908284783967, L: 11.025447791946796
+2023-10-22 20:15:17,471:INFO: Chi^2: 0.11648723461487595, L: 18.375746319911325
+2023-10-22 20:15:18,363:INFO: Chi^2: 0.11648331828871815, L: 30.626243866518877
+2023-10-22 20:15:19,275:INFO: Chi^2: 0.11463593702787327, L: 10.208747955506292
+2023-10-22 20:15:20,171:INFO: Chi^2: 0.11455979960496572, L: 17.01457992584382
+2023-10-22 20:15:21,070:INFO: Chi^2: 0.11455293502910531, L: 28.3576332097397
+2023-10-22 20:15:22,000:INFO: Chi^2: 0.11455203389430024, L: 47.26272201623283
+2023-10-22 20:15:22,937:INFO: Chi^2: 0.1144277921178375, L: 15.754240672077609
+2023-10-22 20:15:23,867:INFO: Chi^2: 0.1144181170170829, L: 26.257067786796014
+2023-10-22 20:15:24,810:INFO: Chi^2: 0.11441688685310462, L: 43.76177964466003
+2023-10-22 20:15:25,753:INFO: Chi^2: 0.11418177432212974, L: 14.587259881553344
+2023-10-22 20:15:26,723:INFO: Chi^2: 0.11416770029451241, L: 24.312099802588904
+2023-10-22 20:15:27,682:INFO: Chi^2: 0.11416599485688583, L: 40.52016633764817
+2023-10-22 20:15:28,623:INFO: Chi^2: 0.11346616965687319, L: 13.50672211254939
+2023-10-22 20:15:29,554:INFO: Chi^2: 0.11344323117882087, L: 22.511203520915654
+2023-10-22 20:15:30,514:INFO: Chi^2: 0.113440721501835, L: 37.51867253485943
+2023-10-22 20:15:31,461:INFO: Chi^2: 0.11344038368273639, L: 62.53112089143238
+2023-10-22 20:15:32,392:INFO: Chi^2: 0.11340644643778089, L: 20.843706963810792
+2023-10-22 20:15:33,328:INFO: Chi^2: 0.11340300246803361, L: 34.73951160635132
+2023-10-22 20:15:34,270:INFO: Chi^2: 0.1134025460577767, L: 57.89918601058554
+2023-10-22 20:15:35,222:INFO: Chi^2: 0.1133505397413153, L: 19.29972867019518
+2023-10-22 20:15:36,179:INFO: Chi^2: 0.11334577623608817, L: 32.1662144503253
+2023-10-22 20:15:37,128:INFO: Chi^2: 0.11334515777832024, L: 53.61035741720883
+2023-10-22 20:15:38,118:INFO: Chi^2: 0.11326080569525143, L: 17.87011913906961
+2023-10-22 20:15:39,021:INFO: Chi^2: 0.11325413768083063, L: 29.783531898449354
+2023-10-22 20:15:39,907:INFO: Chi^2: 0.11325329548390643, L: 49.63921983074892
+2023-10-22 20:15:40,852:INFO: Chi^2: 0.11310104171443378, L: 16.54640661024964
+2023-10-22 20:15:41,782:INFO: Chi^2: 0.11309151080351663, L: 27.57734435041607
+2023-10-22 20:15:42,654:INFO: Chi^2: 0.11309035292121385, L: 45.96224058402678
+2023-10-22 20:15:43,554:INFO: Chi^2: 0.11272747199765068, L: 15.32074686134226
+2023-10-22 20:15:44,455:INFO: Chi^2: 0.11271311415912645, L: 25.534578102237102
+2023-10-22 20:15:45,380:INFO: Chi^2: 0.11271147906973411, L: 42.55763017039517
+2023-10-22 20:15:46,253:INFO: Chi^2: 0.11271125876728298, L: 70.92938361732529
+2023-10-22 20:15:47,161:INFO: Chi^2: 0.11269043362806283, L: 23.643127872441763
+2023-10-22 20:15:48,089:INFO: Chi^2: 0.1126881985221184, L: 39.40521312073627
+2023-10-22 20:15:48,993:INFO: Chi^2: 0.11268790106537217, L: 65.67535520122712
+2023-10-22 20:15:49,905:INFO: Chi^2: 0.11265693500991945, L: 21.891785067075705
+2023-10-22 20:15:50,851:INFO: Chi^2: 0.11265386286079675, L: 36.48630844512618
+2023-10-22 20:15:51,741:INFO: Chi^2: 0.11265346049103886, L: 60.8105140752103
+2023-10-22 20:15:52,649:INFO: Chi^2: 0.11260568124953517, L: 20.270171358403434
+2023-10-22 20:15:53,501:INFO: Chi^2: 0.11260142575475178, L: 33.78361893067239
+2023-10-22 20:15:54,400:INFO: Chi^2: 0.11260087992019331, L: 56.30603155112065
+2023-10-22 20:15:55,327:INFO: Chi^2: 0.11252258359808005, L: 18.76867718370688
+2023-10-22 20:15:56,254:INFO: Chi^2: 0.11251661971337014, L: 31.28112863951147
+2023-10-22 20:15:57,201:INFO: Chi^2: 0.11251587575439236, L: 52.13521439918578
+2023-10-22 20:15:58,066:INFO: Chi^2: 0.11237193808945521, L: 17.378404799728592
+2023-10-22 20:15:58,967:INFO: Chi^2: 0.11236340866665886, L: 28.964007999547658
+2023-10-22 20:15:59,887:INFO: Chi^2: 0.11236238534165266, L: 48.27334666591276
+2023-10-22 20:16:00,823:INFO: Chi^2: 0.11200150655667802, L: 16.091115555304253
+2023-10-22 20:16:01,786:INFO: Chi^2: 0.11198865083244036, L: 26.81852592550709
+2023-10-22 20:16:02,682:INFO: Chi^2: 0.11198720489065069, L: 44.697543209178484
+2023-10-22 20:16:03,585:INFO: Chi^2: 0.11198701184273697, L: 74.49590534863081
+2023-10-22 20:16:04,524:INFO: Chi^2: 0.11196831887679047, L: 24.831968449543606
+2023-10-22 20:16:05,429:INFO: Chi^2: 0.11196633980504785, L: 41.38661408257268
+2023-10-22 20:16:06,367:INFO: Chi^2: 0.11196607887288633, L: 68.97769013762114
+2023-10-22 20:16:07,268:INFO: Chi^2: 0.1119381993840767, L: 22.992563379207045
+2023-10-22 20:16:08,192:INFO: Chi^2: 0.11193547601699051, L: 38.32093896534507
+2023-10-22 20:16:09,156:INFO: Chi^2: 0.11193512270800823, L: 63.86823160890845
+2023-10-22 20:16:10,097:INFO: Chi^2: 0.11189193900145702, L: 21.289410536302817
+2023-10-22 20:16:10,996:INFO: Chi^2: 0.11188816321315452, L: 35.48235089383803
+2023-10-22 20:16:11,943:INFO: Chi^2: 0.11188768353568701, L: 59.137251489730055
+2023-10-22 20:16:12,891:INFO: Chi^2: 0.11181653399847871, L: 19.71241716324335
+2023-10-22 20:16:13,841:INFO: Chi^2: 0.11181124025582391, L: 32.85402860540558
+2023-10-22 20:16:14,829:INFO: Chi^2: 0.11181058612990816, L: 54.75671434234263
+2023-10-22 20:16:15,773:INFO: Chi^2: 0.11167864513279564, L: 18.25223811411421
+2023-10-22 20:16:16,699:INFO: Chi^2: 0.11167107972983846, L: 30.420396856857014
+2023-10-22 20:16:17,679:INFO: Chi^2: 0.11167018011410246, L: 50.700661428095025
+2023-10-22 20:16:18,626:INFO: Chi^2: 0.11133278883144368, L: 16.900220476031674
+2023-10-22 20:16:19,581:INFO: Chi^2: 0.11132143448743767, L: 28.167034126719457
+2023-10-22 20:16:20,526:INFO: Chi^2: 0.11132016591230318, L: 46.94505687786576
+2023-10-22 20:16:21,464:INFO: Chi^2: 0.1113199977146933, L: 78.2417614631096
+2023-10-22 20:16:22,415:INFO: Chi^2: 0.1113034786119421, L: 26.080587154369866
+2023-10-22 20:16:23,368:INFO: Chi^2: 0.11130174095019793, L: 43.46764525728312
+2023-10-22 20:16:24,330:INFO: Chi^2: 0.11130151342422971, L: 72.4460754288052
+2023-10-22 20:16:25,239:INFO: Chi^2: 0.11127686843553751, L: 24.148691809601733
+2023-10-22 20:16:26,151:INFO: Chi^2: 0.11127447590192296, L: 40.24781968266955
+2023-10-22 20:16:27,066:INFO: Chi^2: 0.11127416761009183, L: 67.07969947111592
+2023-10-22 20:16:28,027:INFO: Chi^2: 0.11123600032208159, L: 22.359899823705305
+2023-10-22 20:16:28,929:INFO: Chi^2: 0.1112326825550174, L: 37.26649970617551
+2023-10-22 20:16:29,835:INFO: Chi^2: 0.11123226378695596, L: 62.11083284362585
+2023-10-22 20:16:30,774:INFO: Chi^2: 0.11116946219015679, L: 20.703610947875283
+2023-10-22 20:16:31,686:INFO: Chi^2: 0.1111648130746272, L: 34.50601824645881
+2023-10-22 20:16:32,581:INFO: Chi^2: 0.11116424195625485, L: 57.51003041076468
+2023-10-22 20:16:33,524:INFO: Chi^2: 0.1110485089886866, L: 19.170010136921558
+2023-10-22 20:16:34,485:INFO: Chi^2: 0.11104187996031979, L: 31.950016894869265
+2023-10-22 20:16:35,441:INFO: Chi^2: 0.11104109520109727, L: 53.25002815811544
+2023-10-22 20:16:36,384:INFO: Chi^2: 0.11075200090957751, L: 17.75000938603848
+2023-10-22 20:16:37,335:INFO: Chi^2: 0.11074214554599113, L: 29.583348976730804
+2023-10-22 20:16:38,276:INFO: Chi^2: 0.11074104432679596, L: 49.30558162788467
+2023-10-22 20:16:39,234:INFO: Chi^2: 0.11074089896236004, L: 82.17596937980778
+2023-10-22 20:16:40,192:INFO: Final Chi^2: 0.11072658539213667, L: 82.17596937980778. Converged: fail. Maximum iterations
+2023-10-22 20:18:36,770:INFO: Chi^2: -0.22803796275268323, L: 1.0
+2023-10-22 20:18:37,134:INFO: Chi^2: -0.48227379240538576, L: 0.3333333333333333
+2023-10-22 20:18:37,499:INFO: Chi^2: -0.8188847168494884, L: 0.5555555555555555
+2023-10-22 20:18:37,860:INFO: Chi^2: -1.2607510692112678, L: 0.9259259259259257
+2023-10-22 20:18:38,240:INFO: Chi^2: -2.5214010873197172, L: 1.5432098765432096
+2023-10-22 20:18:38,835:INFO: Chi^2: -2.5214103692214582, L: 321.5020576131687
+2023-10-22 20:18:39,203:INFO: Chi^2: -2.5214117514294876, L: 535.8367626886145
+2023-10-22 20:18:39,577:INFO: Chi^2: -2.521411990125648, L: 893.061271147691
+2023-10-22 20:18:39,935:INFO: Chi^2: -2.5214248731023874, L: 297.68709038256367
+2023-10-22 20:18:40,307:INFO: Chi^2: -2.5214266872502105, L: 496.1451506376061
+2023-10-22 20:18:40,694:INFO: Final Chi^2: -2.5214269969253236, L: 2480.7257531880305. Converged: success by immobility. Convergence not guaranteed
+2023-10-22 20:23:39,809:INFO: Chi^2: 1.9750303416616444, L: 1.0
+2023-10-22 20:23:40,159:INFO: Chi^2: 1.6483064840584525, L: 1.6666666666666667
+2023-10-22 20:23:40,429:INFO: Chi^2: 0.5345584748111625, L: 0.5555555555555556
+2023-10-22 20:23:40,685:INFO: Chi^2: 0.3171487823296886, L: 0.1851851851851852
+2023-10-22 20:23:40,932:INFO: Chi^2: 0.11655790461675544, L: 0.0617283950617284
+2023-10-22 20:23:41,244:INFO: Chi^2: 0.09738607442214592, L: 0.10288065843621401
+2023-10-22 20:23:41,573:INFO: Chi^2: 0.07624132210202177, L: 0.1714677640603567
+2023-10-22 20:23:41,964:INFO: Chi^2: 0.07369255758619388, L: 1.4288980338363058
+2023-10-22 20:23:42,276:INFO: Chi^2: 0.07154743839626108, L: 0.47629934461210194
+2023-10-22 20:23:42,602:INFO: Chi^2: 0.06830643439306174, L: 0.7938322410201698
+2023-10-22 20:23:42,919:INFO: Chi^2: 0.06467447537678928, L: 0.26461074700672327
+2023-10-22 20:23:43,226:INFO: Chi^2: 0.062098181938607874, L: 0.44101791167787213
+2023-10-22 20:23:43,555:INFO: Chi^2: 0.05798380857381827, L: 0.1470059705592907
+2023-10-22 20:23:43,879:INFO: Chi^2: 0.05283384437536856, L: 0.2450099509321512
+2023-10-22 20:23:44,189:INFO: Chi^2: 0.0504483168815895, L: 0.0816699836440504
+2023-10-22 20:23:44,480:INFO: Chi^2: 0.04550703784105711, L: 0.027223327881350134
+2023-10-22 20:23:44,716:INFO: Chi^2: 0.03854485580850669, L: 0.009074442627116711
+2023-10-22 20:23:45,073:INFO: Chi^2: 0.037756494767930665, L: 0.015124071045194518
+2023-10-22 20:23:45,395:INFO: Chi^2: 0.037738084014615834, L: 0.005041357015064839
+2023-10-22 20:23:45,739:INFO: Chi^2: 0.03741750873846802, L: 0.0016804523383549463
+2023-10-22 20:23:46,058:INFO: Chi^2: 0.0370680535443921, L: 0.0005601507794516488
+2023-10-22 20:23:46,730:INFO: Chi^2: 0.03706792226637597, L: 7.683824135139216e-07
+2023-10-22 20:23:47,117:INFO: Final Chi^2: 0.03706792222120814, L: 2.561274711713072e-07. Converged: success
+2023-10-22 20:24:26,533:INFO: Chi^2: 1.5496092571582614, L: 1.0
+2023-10-22 20:24:27,323:INFO: Chi^2: 0.41602265667397137, L: 0.3333333333333333
+2023-10-22 20:24:28,220:INFO: Chi^2: 0.12303252296695957, L: 0.1111111111111111
+2023-10-22 20:24:29,098:INFO: Chi^2: 0.09677192508036773, L: 0.1851851851851852
+2023-10-22 20:24:29,811:INFO: Chi^2: 0.07976129527246265, L: 0.0617283950617284
+2023-10-22 20:24:30,785:INFO: Chi^2: 0.06402452309849233, L: 0.5144032921810701
+2023-10-22 20:24:31,691:INFO: Chi^2: 0.06242279255185525, L: 0.8573388203017834
+2023-10-22 20:24:32,586:INFO: Chi^2: 0.05953135512865397, L: 0.28577960676726116
+2023-10-22 20:24:33,524:INFO: Chi^2: 0.058435408034111305, L: 0.47629934461210194
+2023-10-22 20:24:34,549:INFO: Chi^2: 0.055493367743864715, L: 0.158766448204034
+2023-10-22 20:24:35,608:INFO: Chi^2: 0.0513306860173219, L: 0.2646107470067233
+2023-10-22 20:24:36,578:INFO: Chi^2: 0.049654862559879394, L: 0.44101791167787224
+2023-10-22 20:24:37,532:INFO: Chi^2: 0.046491707912843246, L: 0.14700597055929074
+2023-10-22 20:24:38,469:INFO: Chi^2: 0.04536467813535742, L: 0.24500995093215125
+2023-10-22 20:24:39,396:INFO: Chi^2: 0.04167222266386817, L: 0.08166998364405041
+2023-10-22 20:24:40,339:INFO: Chi^2: 0.039121413760414406, L: 0.1361166394067507
+2023-10-22 20:24:41,277:INFO: Chi^2: 0.037066484685089156, L: 0.04537221313558357
+2023-10-22 20:24:42,327:INFO: Chi^2: 0.034860672242602524, L: 0.015124071045194523
+2023-10-22 20:24:43,366:INFO: Chi^2: 0.034592162039306276, L: 0.005041357015064841
+2023-10-22 20:24:44,945:INFO: Chi^2: 0.034583944062667474, L: 6.915441721625295e-06
+2023-10-22 20:24:46,367:INFO: Chi^2: 0.03458345725304367, L: 8.537582372376908e-08
+2023-10-22 20:24:48,294:INFO: Chi^2: 0.034583409794712104, L: 0.055583218570162164
+2023-10-22 20:24:49,460:INFO: Chi^2: 0.03458340846957383, L: 0.4631934880846847
+2023-10-22 20:24:50,484:INFO: Chi^2: 0.03458340521687951, L: 0.15439782936156157
+2023-10-22 20:24:51,641:INFO: Chi^2: 0.03458340515088474, L: 1.286648578013013
+2023-10-22 20:24:52,868:INFO: Chi^2: 0.03458340514993911, L: 10.722071483441775
+2023-10-22 20:24:53,986:INFO: Chi^2: 0.03458340514961062, L: 17.870119139069626
+2023-10-22 20:24:55,159:INFO: Chi^2: 0.034583405149499806, L: 29.78353189844938
+2023-10-22 20:24:56,291:INFO: Chi^2: 0.03458340514839352, L: 9.927843966149792
+2023-10-22 20:24:57,410:INFO: Final Chi^2: 0.03458340514800802, L: 49.639219830748964. Converged: success by immobility. Convergence not guaranteed
+2023-10-22 20:32:39,130:INFO: Chi^2: 5.37077494182093, L: 1.0
+2023-10-22 20:32:39,462:INFO: Chi^2: 3.0582063108225217, L: 1.6666666666666667
+2023-10-22 20:32:39,850:INFO: Chi^2: 2.7528152081469695, L: 2.777777777777778
+2023-10-22 20:32:40,160:INFO: Chi^2: 0.6243131210728099, L: 0.925925925925926
+2023-10-22 20:32:40,461:INFO: Chi^2: 0.24909168351007058, L: 0.308641975308642
+2023-10-22 20:32:40,731:INFO: Chi^2: 0.18622646438751805, L: 0.10288065843621401
+2023-10-22 20:32:41,025:INFO: Chi^2: 0.11378149903797138, L: 0.03429355281207134
+2023-10-22 20:32:41,284:INFO: Chi^2: 0.04995731811857471, L: 0.011431184270690446
+2023-10-22 20:32:41,524:INFO: Chi^2: 0.04075429244723195, L: 0.0038103947568968156
+2023-10-22 20:32:41,844:INFO: Chi^2: 0.03924509312659043, L: 0.001270131585632272
+2023-10-22 20:32:42,127:INFO: Chi^2: 0.03909701813918515, L: 0.0004233771952107573
+2023-10-22 20:32:42,482:INFO: Chi^2: 0.03909701265679394, L: 0.0001411257317369191
+2023-10-22 20:32:42,797:INFO: Final Chi^2: 0.03909701265365361, L: 0.0001411257317369191. Converged: success
+2023-10-23 21:06:42,390:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-23 21:06:42,391:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-23 21:06:42,391:INFO: NumExpr defaulting to 8 threads.
+2023-10-23 21:06:44,861:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-23 21:06:45,218:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-23 21:06:45,231:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-23 21:06:45,292:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-23 21:06:45,296:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-23 21:06:45,319:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-23 21:06:45,496:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-23 21:06:45,518:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-23 21:06:45,534:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-24 11:06:23,869:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-24 11:06:23,870:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-24 11:06:23,870:INFO: NumExpr defaulting to 8 threads.
+2023-10-24 11:06:42,020:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-24 11:06:42,375:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-24 11:06:42,387:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-24 11:06:42,445:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-24 11:06:42,449:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-24 11:06:42,471:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-24 11:06:42,508:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-24 11:06:42,530:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-24 11:06:42,546:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-25 19:55:01,556:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-25 19:55:01,558:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-25 19:55:01,559:INFO: NumExpr defaulting to 8 threads.
+2023-10-25 19:55:19,596:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-25 19:55:19,956:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-25 19:55:19,969:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-25 19:55:20,026:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-25 19:55:20,031:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-25 19:55:20,054:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-25 19:55:20,218:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-25 19:55:20,242:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-25 19:55:20,259:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-25 21:13:48,201:ERROR: Reference coordinate (RA DEC) mismatch! All images in Image_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:31:03,797:ERROR: Reference coordinate (RA DEC) mismatch! All images in Image_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,287:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,289:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,291:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,294:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,297:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,300:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,303:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,307:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,310:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,314:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,319:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,323:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,328:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,333:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,338:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,344:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:39:34,349:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:34,092:ERROR: Reference coordinate (RA DEC) mismatch! All images in Image_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,693:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,695:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,698:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,700:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,703:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,706:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,710:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,713:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,717:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,721:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,725:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,730:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,734:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,740:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,745:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,750:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:45:56,756:ERROR: Reference (world) coordinate mismatch! All windows in Window_List are not on the same tangent plane! Likely serious coordinate mismatch problems. See the coordinates page in the documentation for what this means.
+2023-10-25 21:55:26,895:INFO: Chi^2: 0.39089564468321375, L: 1.0
+2023-10-25 21:55:31,924:INFO: Chi^2: 0.25130744287923285, L: 0.3333333333333333
+2023-10-25 21:55:37,085:INFO: Chi^2: 0.1631388480689291, L: 0.1111111111111111
+2023-10-25 21:55:41,648:INFO: Chi^2: 0.08575228533933751, L: 0.037037037037037035
+2023-10-25 21:55:46,317:INFO: Chi^2: 0.05281832589822056, L: 0.012345679012345678
+2023-10-25 21:55:50,727:INFO: Chi^2: 0.04002270130810991, L: 0.004115226337448559
+2023-10-25 21:56:01,439:INFO: Chi^2: 0.03847265654949542, L: 0.857338820301783
+2023-10-25 21:56:07,689:INFO: Chi^2: 0.03794997277607374, L: 1.4288980338363049
+2023-10-25 21:56:13,890:INFO: Chi^2: 0.03692109055001387, L: 0.4762993446121016
+2023-10-25 21:56:20,130:INFO: Chi^2: 0.036447880474048115, L: 0.7938322410201694
+2023-10-25 21:56:26,293:INFO: Chi^2: 0.03518806638073162, L: 0.2646107470067231
+2023-10-25 21:56:32,566:INFO: Chi^2: 0.03453026974863534, L: 0.44101791167787185
+2023-10-25 21:56:38,748:INFO: Chi^2: 0.03276034984289288, L: 0.14700597055929063
+2023-10-25 21:56:45,040:INFO: Chi^2: 0.03176179471140252, L: 0.24500995093215105
+2023-10-25 21:56:51,458:INFO: Chi^2: 0.030538887579315405, L: 0.08166998364405036
+2023-10-25 21:56:57,808:INFO: Chi^2: 0.029392149293992514, L: 0.02722332788135012
+2023-10-25 21:57:05,824:INFO: Chi^2: 0.029097075010143216, L: 0.003024814209038902
+2023-10-25 21:57:12,163:INFO: Chi^2: 0.029086384449320678, L: 0.005041357015064836
+2023-10-25 21:57:18,468:INFO: Chi^2: 0.029083756824402653, L: 0.008402261691774727
+2023-10-25 21:57:24,974:INFO: Chi^2: 0.02905791187644311, L: 0.0028007538972582425
+2023-10-25 21:57:31,365:INFO: Chi^2: 0.028818191414015596, L: 0.004667923162097071
+2023-10-25 21:57:40,990:INFO: Chi^2: 0.028760887776648376, L: 0.1944967984207113
+2023-10-25 21:57:47,366:INFO: Chi^2: 0.028511183338348695, L: 0.0648322661402371
+2023-10-25 21:57:53,612:INFO: Chi^2: 0.02783573442560601, L: 0.10805377690039515
+2023-10-25 21:57:59,751:INFO: Chi^2: 0.025607068409902376, L: 0.18008962816732524
+2023-10-25 21:58:05,767:INFO: Chi^2: 0.025473576955982378, L: 0.3001493802788754
+2023-10-25 21:58:11,904:INFO: Chi^2: 0.02464795704206041, L: 0.10004979342629179
+2023-10-25 21:58:18,108:INFO: Chi^2: 0.02432579146304786, L: 0.1667496557104863
+2023-10-25 21:58:24,409:INFO: Chi^2: 0.023516441944508984, L: 0.0555832185701621
+2023-10-25 21:58:30,908:INFO: Chi^2: 0.0218614459646752, L: 0.09263869761693684
+2023-10-25 21:58:37,323:INFO: Chi^2: 0.021646891638780037, L: 0.1543978293615614
+2023-10-25 21:58:43,885:INFO: Chi^2: 0.020376907809883903, L: 0.05146594312052047
+2023-10-25 21:58:50,261:INFO: Chi^2: 0.019904402143758226, L: 0.08577657186753411
+2023-10-25 21:58:56,709:INFO: Chi^2: 0.019841477283074695, L: 0.02859219062251137
+2023-10-25 21:59:02,983:INFO: Chi^2: 0.017298906293039956, L: 0.04765365103751895
+2023-10-25 21:59:09,472:INFO: Chi^2: 0.017105540347663366, L: 0.07942275172919826
+2023-10-25 21:59:15,902:INFO: Chi^2: 0.016317374521681315, L: 0.02647425057639942
+2023-10-25 21:59:22,038:INFO: Chi^2: 0.015886395586461398, L: 0.044123750960665696
+2023-10-25 21:59:28,346:INFO: Chi^2: 0.015802505472703676, L: 0.07353958493444283
+2023-10-25 21:59:34,758:INFO: Chi^2: 0.015342632497082504, L: 0.02451319497814761
+2023-10-25 21:59:41,171:INFO: Chi^2: 0.015155265805851628, L: 0.04085532496357935
+2023-10-25 21:59:47,529:INFO: Chi^2: 0.015127271822465736, L: 0.013618441654526449
+2023-10-25 21:59:53,949:INFO: Chi^2: 0.014422942644688734, L: 0.022697402757544078
+2023-10-25 22:00:00,161:INFO: Chi^2: 0.014385052617637544, L: 0.037829004595906796
+2023-10-25 22:00:06,450:INFO: Chi^2: 0.014236848586976391, L: 0.012609668198635599
+2023-10-25 22:00:12,612:INFO: Chi^2: 0.014140467342057936, L: 0.021016113664392665
+2023-10-25 22:00:19,029:INFO: Chi^2: 0.014125926541559385, L: 0.03502685610732111
+2023-10-25 22:00:25,358:INFO: Chi^2: 0.014050452598601496, L: 0.01167561870244037
+2023-10-25 22:00:31,796:INFO: Chi^2: 0.014019974438714404, L: 0.019459364504067284
+2023-10-25 22:00:38,584:INFO: Chi^2: 0.013992946506668772, L: 0.006486454834689095
+2023-10-25 22:00:45,324:INFO: Chi^2: 0.013929144369461825, L: 0.010810758057815159
+2023-10-25 22:00:52,014:INFO: Chi^2: 0.013924089143838187, L: 0.00360358601927172
+2023-10-25 22:00:58,731:INFO: Chi^2: 0.01390219963242272, L: 0.0012011953397572399
+2023-10-25 22:01:15,048:INFO: Chi^2: 0.013900729480317417, L: 1.647730232863155e-06
+2023-10-25 22:01:23,772:INFO: Chi^2: 0.013900729085071362, L: 1.83081136984795e-07
+2023-10-25 22:01:32,420:INFO: Final Chi^2: 0.013900729080292726, L: 2.0342348553866112e-08. Converged: success
+2023-10-26 10:53:00,187:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-26 10:53:00,188:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-26 10:53:00,188:INFO: NumExpr defaulting to 8 threads.
+2023-10-26 10:53:02,818:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-26 10:53:03,175:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-26 10:53:03,188:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-26 10:53:03,247:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-26 10:53:03,252:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-26 10:53:03,275:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-26 10:53:03,312:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-26 10:53:03,333:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-26 10:53:03,350:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-26 10:56:19,485:INFO: Chi^2: 0.3918456389985494, L: 1.0
+2023-10-26 10:56:24,422:INFO: Chi^2: 0.25151142089820805, L: 0.3333333333333333
+2023-10-26 10:56:29,546:INFO: Chi^2: 0.1637326191396264, L: 0.1111111111111111
+2023-10-26 10:56:34,466:INFO: Chi^2: 0.08624510666182524, L: 0.037037037037037035
+2023-10-26 10:56:39,108:INFO: Chi^2: 0.05317012067223642, L: 0.012345679012345678
+2023-10-26 10:56:43,682:INFO: Chi^2: 0.04023659435136974, L: 0.004115226337448559
+2023-10-26 10:56:54,973:INFO: Chi^2: 0.038683327441843184, L: 0.857338820301783
+2023-10-26 10:57:01,278:INFO: Chi^2: 0.038174915214263715, L: 1.4288980338363049
+2023-10-26 10:57:07,778:INFO: Chi^2: 0.03716592323374868, L: 0.4762993446121016
+2023-10-26 10:57:14,155:INFO: Chi^2: 0.03669788930074647, L: 0.7938322410201694
+2023-10-26 10:57:20,637:INFO: Chi^2: 0.0354260995062628, L: 0.2646107470067231
+2023-10-26 10:57:26,854:INFO: Chi^2: 0.03476966157840509, L: 0.44101791167787185
+2023-10-26 10:57:33,091:INFO: Chi^2: 0.03298394616363962, L: 0.14700597055929063
+2023-10-26 10:57:39,482:INFO: Chi^2: 0.03198486744490273, L: 0.24500995093215105
+2023-10-26 10:57:46,060:INFO: Chi^2: 0.030753829039227857, L: 0.08166998364405036
+2023-10-26 10:57:52,446:INFO: Chi^2: 0.0296119651657627, L: 0.02722332788135012
+2023-10-26 10:58:00,422:INFO: Chi^2: 0.029321036456188918, L: 0.003024814209038902
+2023-10-26 10:58:07,068:INFO: Chi^2: 0.029310475038133443, L: 0.005041357015064836
+2023-10-26 10:58:13,698:INFO: Chi^2: 0.02930783312620324, L: 0.008402261691774727
+2023-10-26 10:58:20,229:INFO: Chi^2: 0.029280803509696376, L: 0.0028007538972582425
+2023-10-26 10:58:26,732:INFO: Chi^2: 0.028950464605279665, L: 0.004667923162097071
+2023-10-26 10:58:36,887:INFO: Chi^2: 0.028746892129457184, L: 0.1944967984207113
+2023-10-26 10:58:43,426:INFO: Chi^2: 0.028701021612302084, L: 0.3241613307011855
+2023-10-26 10:58:50,494:INFO: Chi^2: 0.028688649414069536, L: 0.5402688845019759
+2023-10-26 10:58:56,949:INFO: Chi^2: 0.02835071382315642, L: 0.1800896281673253
+2023-10-26 10:59:03,486:INFO: Chi^2: 0.028140265597397032, L: 0.3001493802788755
+2023-10-26 10:59:10,826:INFO: Chi^2: 0.02806331239865699, L: 0.5002489671314592
+2023-10-26 10:59:18,156:INFO: Chi^2: 0.027463325168240557, L: 0.1667496557104864
+2023-10-26 10:59:24,763:INFO: Chi^2: 0.026944474670787484, L: 0.27791609285081065
+2023-10-26 10:59:31,112:INFO: Chi^2: 0.026855740582866713, L: 0.4631934880846844
+2023-10-26 10:59:37,136:INFO: Chi^2: 0.02630629344605581, L: 0.15439782936156146
+2023-10-26 10:59:43,149:INFO: Chi^2: 0.026099602070890827, L: 0.2573297156026024
+2023-10-26 10:59:49,298:INFO: Chi^2: 0.025277609265223364, L: 0.08577657186753414
+2023-10-26 10:59:55,960:INFO: Chi^2: 0.024372503933291826, L: 0.14296095311255688
+2023-10-26 11:00:02,486:INFO: Chi^2: 0.02422718290696152, L: 0.23826825518759479
+2023-10-26 11:00:09,452:INFO: Chi^2: 0.023258144091314388, L: 0.07942275172919826
+2023-10-26 11:00:16,199:INFO: Chi^2: 0.022899887797456563, L: 0.1323712528819971
+2023-10-26 11:00:22,702:INFO: Chi^2: 0.02189455260551322, L: 0.0441237509606657
+2023-10-26 11:00:29,294:INFO: Chi^2: 0.020260155854843812, L: 0.07353958493444283
+2023-10-26 11:00:35,640:INFO: Chi^2: 0.02003611730994426, L: 0.12256597489073806
+2023-10-26 11:00:42,077:INFO: Chi^2: 0.018838216593926753, L: 0.040855324963579354
+2023-10-26 11:00:48,447:INFO: Chi^2: 0.0183625011330136, L: 0.06809220827263225
+2023-10-26 11:00:54,688:INFO: Chi^2: 0.018227188975008888, L: 0.11348701378772041
+2023-10-26 11:01:01,005:INFO: Chi^2: 0.017416840997368264, L: 0.0378290045959068
+2023-10-26 11:01:07,546:INFO: Chi^2: 0.01712159288010361, L: 0.063048340993178
+2023-10-26 11:01:14,021:INFO: Chi^2: 0.01680184308069172, L: 0.02101611366439267
+2023-10-26 11:01:20,342:INFO: Chi^2: 0.015605570831741201, L: 0.03502685610732111
+2023-10-26 11:01:27,007:INFO: Chi^2: 0.01551269294263839, L: 0.058378093512201856
+2023-10-26 11:01:33,462:INFO: Chi^2: 0.015113076466850891, L: 0.019459364504067284
+2023-10-26 11:01:39,891:INFO: Chi^2: 0.01488415885244789, L: 0.03243227417344547
+2023-10-26 11:01:46,288:INFO: Chi^2: 0.014843669120313464, L: 0.05405379028907578
+2023-10-26 11:01:52,862:INFO: Chi^2: 0.014618507465608967, L: 0.018017930096358593
+2023-10-26 11:01:59,270:INFO: Chi^2: 0.014527013477641024, L: 0.030029883493930987
+2023-10-26 11:02:05,776:INFO: Chi^2: 0.014489949497950563, L: 0.010009961164643663
+2023-10-26 11:02:12,319:INFO: Chi^2: 0.014188119368934228, L: 0.01668326860773944
+2023-10-26 11:02:19,015:INFO: Chi^2: 0.014171466496112032, L: 0.027805447679565734
+2023-10-26 11:02:25,557:INFO: Chi^2: 0.014107259084516514, L: 0.009268482559855245
+2023-10-26 11:02:32,212:INFO: Chi^2: 0.014069961147677518, L: 0.015447470933092075
+2023-10-26 11:02:38,899:INFO: Chi^2: 0.014059599318916448, L: 0.005149156977697358
+2023-10-26 11:02:45,541:INFO: Chi^2: 0.014025944525123483, L: 0.0017163856592324527
+2023-10-26 11:02:52,218:INFO: Chi^2: 0.013995000509757521, L: 0.0005721285530774842
+2023-10-26 11:03:07,330:INFO: Chi^2: 0.013994984881059188, L: 7.848128300102663e-07
+2023-10-26 11:03:17,158:INFO: Final Chi^2: 0.013994984818113, L: 8.720142555669627e-08. Converged: success
+2023-10-27 14:56:14,701:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-27 14:56:14,702:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-27 14:56:14,703:INFO: NumExpr defaulting to 8 threads.
+2023-10-27 14:57:07,254:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-27 14:57:07,614:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 14:57:07,627:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 14:57:07,685:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 14:57:07,689:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-27 14:57:07,712:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-27 14:57:07,748:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-27 14:57:07,770:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-27 14:57:07,917:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-27 15:28:15,721:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-27 15:28:15,722:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-27 15:28:15,722:INFO: NumExpr defaulting to 8 threads.
+2023-10-27 15:28:19,049:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-27 15:28:19,413:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:28:19,426:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:28:19,483:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:28:19,487:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-27 15:28:19,510:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-27 15:28:19,547:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-27 15:28:19,568:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-27 15:28:19,585:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-27 15:32:35,991:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-27 15:32:35,992:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-27 15:32:35,993:INFO: NumExpr defaulting to 8 threads.
+2023-10-27 15:32:39,921:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-27 15:32:40,280:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:32:40,292:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:32:40,350:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:32:40,354:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-27 15:32:40,377:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-27 15:32:40,550:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-27 15:32:40,572:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-27 15:32:40,589:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-27 15:38:15,120:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-27 15:38:15,121:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-27 15:38:15,122:INFO: NumExpr defaulting to 8 threads.
+2023-10-27 15:38:18,690:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-27 15:38:19,067:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:38:19,079:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:38:19,137:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:38:19,141:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-27 15:38:19,163:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-27 15:38:19,201:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-27 15:38:19,223:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-27 15:38:19,379:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-27 15:39:12,060:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-27 15:39:12,061:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-27 15:39:12,061:INFO: NumExpr defaulting to 8 threads.
+2023-10-27 15:39:15,424:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-27 15:39:15,777:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:39:15,789:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:39:15,846:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:39:15,850:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-27 15:39:15,872:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-27 15:39:16,037:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-27 15:39:16,060:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-27 15:39:16,076:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-27 15:40:06,885:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-27 15:40:06,887:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-27 15:40:06,887:INFO: NumExpr defaulting to 8 threads.
+2023-10-27 15:40:08,166:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-27 15:40:08,524:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:40:08,537:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:40:08,594:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:40:08,598:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-27 15:40:08,621:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-27 15:40:08,657:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-27 15:40:08,679:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-27 15:40:08,826:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
+2023-10-27 15:48:10,274:INFO: Note: detected 256 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2023-10-27 15:48:10,275:INFO: Note: NumExpr detected 256 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-10-27 15:48:10,276:INFO: NumExpr defaulting to 8 threads.
+2023-10-27 15:48:14,047:WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 55924.000000 from DATE-OBS'.
+2023-10-27 15:48:14,415:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:48:14,427:WARNING: FITSFixedWarning: RADECSYS= 'ICRS ' / Astrometric system 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:48:14,485:WARNING: FITSFixedWarning: RADECSYS= 'FK5 ' / Coordinate reference frame 
+the RADECSYS keyword is deprecated, use RADESYSa.
+2023-10-27 15:48:14,489:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-25T07:05:31.987' from MJD-OBS.
+Set DATE-END to '2016-06-04T00:47:19.488' from MJD-END'.
+2023-10-27 15:48:14,512:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2010-01-24T07:39:31.854' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:37:16.477' from MJD-END'.
+2023-10-27 15:48:14,549:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-14T07:05:47.309' from MJD-OBS.
+Set DATE-END to '2016-06-29T23:52:46.677' from MJD-END'.
+2023-10-27 15:48:14,571:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-05T07:07:56.146' from MJD-OBS.
+Set DATE-END to '2016-05-03T03:02:47.823' from MJD-END'.
+2023-10-27 15:48:14,725:WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2009-12-23T06:21:19.358' from MJD-OBS.
+Set DATE-END to '2016-04-30T03:11:04.794' from MJD-END'.
