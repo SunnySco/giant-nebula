@@ -23,6 +23,8 @@ mpl.rcParams['font.size'] = 12
 mpl.rcParams['axes.unicode_minus'] = False
 mpl.rcParams['xtick.direction'] = 'in'
 mpl.rcParams['ytick.direction'] = 'in'
+mpl.rcParams['xtick.color'] = 'black'
+mpl.rcParams['ytick.color'] = 'black'
 mpl.rcParams['xtick.top'] = True
 mpl.rcParams['ytick.right'] = True
 mpl.rcParams['xtick.minor.visible'] = True
@@ -88,7 +90,7 @@ def plot_filter_curve(galaxy, telescope_band, ax, range_mode='related', length=8
     ax.set_xlim(x_min, x_max)
     ax.set_xlabel('Wavelength(A)')
 
-def plot_intensity_map(galaxy, telescope_band='SUBARU_NB0718', size=10*u.arcsec, sigma=0.7, to_pixelscl=0.05):
+def plot_intensity_map(galaxy, telescope_band='SUBARU_NB0718', size=10*u.arcsec, sigma=0.7, to_pixelscl=0.05, mode='plot'):
     '''
     Plot intensity map of a galaxy in a specific telescope band.
     Only available for NB0718 now.
@@ -109,31 +111,35 @@ def plot_intensity_map(galaxy, telescope_band='SUBARU_NB0718', size=10*u.arcsec,
     def subtract_bkg(data, sigma=3): # sigma clipping
         return data-sigma_clipped_stats(data, sigma=sigma)[1]
     def stack_cutout(cutout_list): #stack and normalize
-        cutout = np.zeros_like(cutout_list[0])
-        for cutout_ in cutout_list:
-            cutout += cutout_
-        return cutout/np.max(cutout)
+        # if mode == 'plot': #get the pure nebula
+        #     cutout = np.zeros_like(cutout_list[0])
+        #     for cutout_ in cutout_list:
+        #         cutout += cutout_
+        #     return cutout/np.max(cutout)
+        # elif mode == 'photometry': #remain the flux unit
+        cutout_list = np.array(cutout_list)
+        return np.mean(cutout_list, axis=0)
     def set_extent():
         data = galaxy.image_files[telescope_band]
         wcs = galaxy.wcss[telescope_band]
         cutout_ = Cutout2D(data, position=galaxy.source_position, size=size, wcs=wcs)
-        extent = np.concatenate([((np.array(cutout_.bbox_cutout[0])-cutout_.position_cutout[0])*wcs.proj_plane_pixel_scales()[0]).to(u.arcsec).value, 
+        extent = np.concatenate([((-np.array(cutout_.bbox_cutout[0])+cutout_.position_cutout[0])*wcs.proj_plane_pixel_scales()[0]).to(u.arcsec).value, 
                                     ((np.array(cutout_.bbox_cutout[1])-cutout_.position_cutout[1])*wcs.proj_plane_pixel_scales()[1]).to(u.arcsec).value])
         return extent
     
     if telescope_band == 'SUBARU_NB0718':
         nebular_list = ['SUBARU_NB0718']
         continuum_list = ['SUBARU_HSC-R', 'SUBARU_HSC-I']
-        nebular_name = '[OII] nebular'
+        nebular_name = '[OII] nebula'
+    # elif telescope_band == 'SUBARU_NB0973':
+    #     nebular_list = ['SUBARU_NB0973', 'SUBARU_HSC-Y', 'SUBARU_IB0945']
+    #     continuum_list = ['SUBARU_HSC-Z', 'SUBARU_NB0921']
+    #     nebular_name = '[OIII] nebular'
     elif telescope_band == 'SUBARU_NB0973':
-        nebular_list = ['SUBARU_NB0973', 'SUBARU_HSC-Y', 'SUBARU_IB0945']
-        continuum_list = ['SUBARU_HSC-Z', 'SUBARU_NB0921']
-        nebular_name = '[OIII] nebular'
-    elif telescope_band == 'SUBARU_NB0973_single':
         telescope_band = 'SUBARU_NB0973'
         nebular_list = ['SUBARU_NB0973']
         continuum_list = ['SUBARU_HSC-Z', 'SUBARU_NB0921']
-        nebular_name = '[OIII] nebular'
+        nebular_name = '[OIII] nebula'
     else:
         print('Wrong telescope band!')
         return None
@@ -187,9 +193,10 @@ def plot_intensity_map(galaxy, telescope_band='SUBARU_NB0718', size=10*u.arcsec,
     ax_y.plot(array_y, np.arange(array_y.shape[0]), 'k-')
     ax_y.set_yticks([])
     
-    return smooth_nebular
+    if mode=='plot': return (smooth_nebular, Cutout2D(galaxy.image_files[telescope_band], position=galaxy.source_position, size=size, wcs=galaxy.wcss[telescope_band]))
+    elif mode=='photometry': return (cutout_nebular, Cutout2D(galaxy.image_files[telescope_band], position=galaxy.source_position, size=size, wcs=galaxy.wcss[telescope_band]))
 
-def plot_rgb_image(galaxy, telescope_bands, contours_data=None, size=10*u.arcsec, stretch=5, Q=8, ax=None):
+def plot_rgb_image(galaxy, telescope_bands, contours_data=None, apertures=None, size=10*u.arcsec, stretch=5, Q=8, ax=None):
     '''
     Plot RGB image of the galaxy.
     Input: 
@@ -217,7 +224,7 @@ def plot_rgb_image(galaxy, telescope_bands, contours_data=None, size=10*u.arcsec
             cutout = zoom(cutout, ratio)/ratio**2
         datas.append(cutout*galaxy.unit_convert(telescope_band))
     datas = np.array(datas)
-    extent = np.concatenate([((np.array(cutout_.bbox_cutout[0])-cutout_.position_cutout[0])*wcs.proj_plane_pixel_scales()[0]).to(u.arcsec).value, 
+    extent = np.concatenate([((-np.array(cutout_.bbox_cutout[0])+cutout_.position_cutout[0])*wcs.proj_plane_pixel_scales()[0]).to(u.arcsec).value, 
                                 ((np.array(cutout_.bbox_cutout[1])-cutout_.position_cutout[1])*wcs.proj_plane_pixel_scales()[1]).to(u.arcsec).value])
     #plot
     if ax == None:
@@ -253,6 +260,10 @@ def plot_rgb_image(galaxy, telescope_bands, contours_data=None, size=10*u.arcsec
         ax.text(0.95*extent[0], 0.55*extent[-1], '+'.join([telescope_bands[4].split('_')[-1], telescope_bands[5].split('_')[-1]]), color='r', ha='left', va='top', fontstyle='italic', fontweight='bold')
     ax.set_xlabel('$\Delta$ RA[arcsec]')
     ax.set_ylabel('$\Delta$ DEC[arcsec]')
+    ax.tick_params(axis='both', which='both', color='white', grid_color='white')
+    if apertures:
+        for aperture in apertures:
+            aperture.plot(ax=ax, color='lightgreen', lw=2)
     if ax == None:
         plt.savefig('_'.join(telescope_bands)+'.png')
         plt.show()

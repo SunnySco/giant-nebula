@@ -64,7 +64,7 @@ def load_SFH_model(mode):
 
     return eval(mode)    
 
-def load_fit_instructions(SFH_model):
+def load_fit_instructions(SFH_model, add_agn=False):
     #dust
     dust = {}                                 # Dust component
     dust["type"] = "Calzetti"                 # Define the shape of the attenuation curve
@@ -72,27 +72,39 @@ def load_fit_instructions(SFH_model):
     #nebula
     nebular = {}
     nebular["logU"] = (-4, -2)
+    #AGN
+    agn = {}
+    agn['alphalam'] = (-2.5, -0.5) #Power law slope of the AGN continuum at lambda < 5000A
+    agn['betalam'] = (-0.5, 1.5) #Power law slope of the AGN continuum at lambda > 5000A
+    agn['hanorm'] = (0., 2.5*10**(-17)) #Halpha luminosity erg/s/cm^2
+    agn['sigma'] = (1000., 5000.) #Velocity dispersion km/s
+    agn['f5100A'] = (0., 10**(-19)) #5100A luminosity erg/s/cm^2
 
     fit_instructions = {}                     # The fit instructions dictionary
     fit_instructions["redshift"] = 0.924  # Vary observed redshift from 0.9 to 1 #spetrum redshift=0.924
     fit_instructions[SFH_model] = load_SFH_model(SFH_model)   
     fit_instructions["dust"] = dust
     fit_instructions["nebular"] = nebular #add nebular emission
-
+    if add_agn: fit_instructions["agn"] = agn
     return fit_instructions
 
-def SED_fitting(version, SFH_model,):
+def SED_fitting(version, SFH_model, add_agn=False):
     galaxy = pipes.galaxy(version, load_photometry_data, spectrum_exists=False, filt_list=load_filter_path(version=version,))
-    fit = pipes.fit(galaxy, load_fit_instructions(SFH_model), run=f'{version}_{SFH_model}_fix_z')
+    if add_agn: agn = 'agn'
+    else: agn = 'noagn'
+    fit = pipes.fit(galaxy, load_fit_instructions(SFH_model, add_agn), run=f'{version}_{SFH_model}_{agn}')
     fit.fit(verbose=False)
     #plot results
     fit.plot_spectrum_posterior(save=True, show=False)
     fit.plot_sfh_posterior(save=True, show=False)
     fit.plot_corner(save=True, show=False)          
 
-def diagnostic_plot(version, SFH_model):
+def diagnostic_plot(version, SFH_model, add_agn=False):
+    if add_agn: agn = 'agn'
+    else: agn = 'fix_z'
+
     galaxy = pipes.galaxy(version, load_photometry_data, spectrum_exists=False, filt_list=load_filter_path(version=version,))
-    fit = pipes.fit(galaxy, load_fit_instructions(SFH_model), run=f'{version}_{SFH_model}_fix_z')
+    fit = pipes.fit(galaxy, load_fit_instructions(SFH_model, add_agn), run=f'{version}_{SFH_model}_{agn}')
     fit.posterior.get_advanced_quantities()
     plt.figure(figsize=(12, 14))
     gs = mpl.gridspec.GridSpec(11, 5, hspace=4., wspace=0.1)
@@ -116,7 +128,7 @@ def diagnostic_plot(version, SFH_model):
     plt.close()
     return fit
    
-def results_plot(versions=['homo_ellipse_v1', 'space_homo_ellipse_v1', 'space_homo_downleft', 'space_homo_upright'], labels=["sfr", "dust:Av"], SFH_models=['exponential', 'delayed', 'lognormal', 'dblplaw']):
+def results_plot(versions=['homo_ellipse_v1', 'space_homo_ellipse_v1', 'space_homo_downleft', 'space_homo_upright'], labels=["sfr", "dust:Av"], SFH_models=['exponential', 'delayed', 'lognormal', 'dblplaw'], add_agn=False):
     def get_diclabel(label):
         if label == 'sfr':
             return 'SFR'
@@ -124,19 +136,28 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_ellipse_v1', 'space_ho
             return 'sSFR'
         else:
             return label
-        
+    if add_agn: agn = 'agn'
+    else: agn = 'fix_z'
+
     plt.rcParams.update({'font.size': 12})
     nicknames = {'homo_ellipse_v1': 'Galaxy',
+                 'homo_ellipse_v1_dered': 'Galaxy',
                 'space_homo_ellipse_v1': 'HST+JWST Galaxy',
                 'space_homo_downleft': 'Arm',
-                'space_homo_upright': 'Bulge'
+                'space_homo_downleft_dered': 'Arm',
+                'space_homo_upright': 'Bulge',
+                'space_homo_upright_dered': 'Bulge',
                 }
     colors = {'homo_ellipse_v1': 'tab:blue',
                 'space_homo_ellipse_v1': 'tab:purple',
                 'space_homo_downleft': 'tab:green',
                 'space_homo_upright': 'tab:orange'
                 }
-    
+    ylims = {'sfr': (-5, 205),
+             'ssfr': (-12, -7),
+             'dust:Av': (2.0, 3.3),
+                }
+
     # Creating subplots
     n_rows = len(labels)
     fig, axs = plt.subplots(n_rows, 1, figsize=(8, 4*n_rows))
@@ -151,7 +172,7 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_ellipse_v1', 'space_ho
             results_dic[new_label] = {}
         for SFH_model in SFH_models:
             galaxy = pipes.galaxy(version, load_photometry_data, spectrum_exists=False, filt_list=load_filter_path(version=version,))
-            fit = pipes.fit(galaxy, load_fit_instructions(SFH_model), run=f'{version}_{SFH_model}_fix_z')
+            fit = pipes.fit(galaxy, load_fit_instructions(SFH_model, add_agn), run=f'{version}_{SFH_model}_{agn}')
             fit.posterior.get_advanced_quantities()
             for label in labels:
                 new_label = get_diclabel(label)
@@ -165,6 +186,7 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_ellipse_v1', 'space_ho
             y1684 = np.array([value[1:] for value in results_dic[new_label].values()]).T
             ax.errorbar(x, y50, np.abs(y1684-y50), fmt='o', capsize=5, label=nicknames[version])
             ax.set_ylabel(new_label)
+            ax.set_ylim(*ylims[label])
         versions_results_dic[version] = results_dic
         #versions_samples_dic[version] = samples_dic
     # General plot adjustments
@@ -190,9 +212,16 @@ if __name__ == '__main__':
         drop_band = pre_drop_band.split(',')
     print("Dropping", drop_telescope, drop_band)
 
+    pre_add_agn = input("Add AGN? (y/n)")
+    if pre_add_agn == 'y':
+        add_agn = True
+    else:
+        add_agn = False
+    print("Add AGN?", add_agn)
+
     SFH_models = ['exponential', 'delayed', 'lognormal', 'dblplaw']
     for SFH_model in SFH_models:
-        SED_fitting(version, SFH_model)
+        SED_fitting(version, SFH_model, add_agn=add_agn)
     print('Done!')
     log_file.close()
     
