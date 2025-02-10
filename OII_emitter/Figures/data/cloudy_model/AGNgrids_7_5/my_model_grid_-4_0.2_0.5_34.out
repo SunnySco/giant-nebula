@@ -1,0 +1,223 @@
+                                                          Cloudy 23.01
+                                                         www.nublado.org
+
+                                                  PRNG seed: 0xfff06f6963ce46ce
+
+                       **************************************23Jul25**************************************
+                       *                                                                                 *
+                       * title my model grid -1.00 0.20 8.00                                             *
+                       * set punch prefix "my_model_grid_-4_0.2_0.5_34"                                  *
+                       * radius 10000 linear parsecs                                                     *
+                       * #distance = 15000.0 parsecs linear                                              *
+                       * table SED "cloudy_continuum_model_34.sed"                                       *
+                       * ionization parameter -4.00                                                      *
+                       * #luminosity 45                                                                  *
+                       * hden 0.5                                                                        *
+                       * grains ism                                                                      *
+                       * #<<< mie_read_opc reading file -- graphite_ism_10.opc                      >>>> *
+                       * #<<< mie_read_opc reading file -- silicate_ism_10.opc                      >>>> *
+                       * metals deplete                                                                  *
+                       * metals and grains 0.2                                                           *
+                       * element scale factor nitrogen 0.2                                               *
+                       * no molecules                                                                    *
+                       * no level2 lines                                                                 *
+                       * no fine opacities                                                               *
+                       * atom h-like levels small                                                        *
+                       * atom he-like levels small                                                       *
+                       * COSMIC RAY BACKGROUND                                                           *
+                       * element limit off -8                                                            *
+                       * print line optical depth                                                        *
+                       * iterate to convergence                                                          *
+                       * save last linelist ".lin" "/Users/lupj/Cloudy/data/CloudyLines.dat" absolute column*
+                       * stop radius 20000 linear parsecs                                                *
+                       * save last radius ".rad"                                                         *
+                       * save last continuum ".cont"                                                     *
+                       * save last physical conditions ".phy"                                            *
+                       * save last overview ".ovr"                                                       *
+                       * save last heating ".heat"                                                       *
+                       * save last cooling ".cool"                                                       *
+                       * save last optical depth ".opd"                                                  *
+                       * save last element hydrogen ".ele_H"                                             *
+                       * save last element helium ".ele_He"                                              *
+                       * save last element carbon ".ele_C"                                               *
+                       * save last element nitrogen ".ele_N"                                             *
+                       * save last element oxygen ".ele_O"                                               *
+                       * save last element argon ".ele_Ar"                                               *
+                       * save last element neon ".ele_Ne"                                                *
+                       * save last element sulphur ".ele_S"                                              *
+                       * save last element chlorin ".ele_Cl"                                             *
+                       * save last element iron ".ele_Fe"                                                *
+                       * save last element silicon ".ele_Si"                                             *
+                       * save last lines emissivity ".emis"                                              *
+                       *                                                                                 *
+                       ***********************************************************************************
+
+
+
+ NOTE Setcon: continuum has zero intensity starting at  3.0447e-09 Ryd.
+  3242 cells in the incident continuum have zero intensity.  Problems???
+
+           9244CellPeak1.00E+00   Lo 3.04e-09=  29.98m   Hi-Con:7.13E+06 Ryd   E(hi):7.35E+06Ryd     E(hi):     100.00 MeV
+           I(nu>1ryd):  -3.0653   Average nu:4.163E+00   I( X-ray):  -3.8535   I(BalC):  -4.0126     Phi(BalmrC):   6.9114
+           phi(1.0-1.8): 6.5415   phi(1.8-4.0):  6.528   phi(4.0-20):  6.392   phi(20--):  5.212     Ion pht flx:9.480E+06
+           I(gam ray):  -5.2552   phi(gam r):   1.4390   I(Infred):  -4.7590   Alf(ox):  -1.3748     Total inten:  -3.0110
+           U(1.0----):1.000E-04   U(4.0----):2.772E-05   T(En-Den):1.440E+00   T(Comp):3.410E+06     nuJnu(912A):1.319E-04
+           Occ(FarIR):0.000E+00   Occ(H n=6):1.131E-18   Occ(1Ryd):6.084E-21   Occ(4R):4.881E-23     Occ (Nu-hi):0.000E+00
+           Tbr(FarIR):0.000E+00   Tbr(H n=6):4.954E-15   Tbr(1Ryd):9.604E-16   Tbr(4R):3.087E-17     Tbr (Nu-hi):0.000E+00
+  
+                                                  Gas Phase Chemical Composition
+        H :  0.0000  He: -1.0000  C : -4.7077  N : -5.4680  O : -4.2306  Ne: -4.6990  Na: -7.0675  Mg: -5.8576  Si: -6.6815
+                                  P : -7.7959  S : -5.4342  Cl: -7.8159  Ar: -6.2993  Fe: -7.2487
+ 
+                                                    Grain Chemical Composition
+                                  C : -4.2543  O : -4.5810  Mg: -5.1831  Si: -5.1831  Fe: -5.1831
+                                                   Sum Atoms Depleted: -3.3541
+                                                   Depletion/Grains-1: 335.50%
+ 
+              Number of grains per hydrogen (scale=1)                         Mass of grains per hydrogen (scale=1)
+        Carbonaceous: -10.510  Silicate: -10.446  PAH: -30.000         Carbonaceous: -3.175  Silicate: -2.947  PAH: -30.000
+
+ ####  1  Te:1.227E+04 Hden:3.162E+00 Ne:3.236E+00 R:3.086E+22 R-R0:4.536E+14 dR:9.073E+14 NTR: 10 Htot:4.787E-23 T912: 1.49e-03###
+ Hydrogen      8.20e-02 9.18e-01 H+o/Hden 1.00e+00 0.00e+00 H-    H2 0.00e+00 0.00e+00 H2+ HeH+ 0.00e+00 Ho+ ColD 2.35e+14 2.63e+15
+ Helium        5.94e-02 7.70e-01 1.70e-01 HeI 2s3S 3.20e-09 Comp H,C 4.77e-30 1.72e-32 Fill Fac 1.00e+00 Gam1/tot 9.96e-01
+ He singlet n  5.94e-02 4.17e-16 2.56e-22 2.66e-22 2.18e-22 3.80e-22 He tripl 3.20e-09 2.93e-20 6.48e-22 6.54e-21 1.05e-21
+ Pressure      NgasTgas 8.24e+04 P(total) 1.14e-11 P( gas ) 1.14e-11 P(Radtn) 0.00e+00 Rad accl 1.18e-09 ForceMul 1.25e+05
+ Texc(La)      2.60e+03 T(I con) 1.44e+00 T(D con) 1.41e-01 T(U tot) 1.44e+00 nT (c+d) 3.82e+05 Prad/Gas 0.00e+00 Pmag/Gas 0.00e+00
+ gra-ism01  *  DustTemp 1.88e+01 Pot Volt-2.18e+00 Chrg (e)-9.97e+00 drf cm/s 6.58e+02 Heating: 4.85e-27 Frac tot 1.01e-04
+ gra-ism02  *  DustTemp 1.77e+01 Pot Volt-2.18e+00 Chrg (e)-1.43e+01 drf cm/s 8.96e+02 Heating: 3.82e-27 Frac tot 7.98e-05
+ gra-ism03  *  DustTemp 1.67e+01 Pot Volt-2.18e+00 Chrg (e)-2.07e+01 drf cm/s 1.13e+03 Heating: 2.78e-27 Frac tot 5.81e-05
+ gra-ism04  *  DustTemp 1.57e+01 Pot Volt-2.18e+00 Chrg (e)-3.01e+01 drf cm/s 1.31e+03 Heating: 1.97e-27 Frac tot 4.13e-05
+ gra-ism05  *  DustTemp 1.48e+01 Pot Volt-2.18e+00 Chrg (e)-4.39e+01 drf cm/s 1.45e+03 Heating: 1.38e-27 Frac tot 2.89e-05
+ gra-ism06  *  DustTemp 1.40e+01 Pot Volt-2.18e+00 Chrg (e)-6.43e+01 drf cm/s 1.58e+03 Heating: 9.69e-28 Frac tot 2.02e-05
+ gra-ism07  *  DustTemp 1.32e+01 Pot Volt-2.17e+00 Chrg (e)-9.43e+01 drf cm/s 1.67e+03 Heating: 6.86e-28 Frac tot 1.43e-05
+ gra-ism08  *  DustTemp 1.24e+01 Pot Volt-2.16e+00 Chrg (e)-1.38e+02 drf cm/s 1.75e+03 Heating: 4.94e-28 Frac tot 1.03e-05
+ gra-ism09  *  DustTemp 1.17e+01 Pot Volt-2.15e+00 Chrg (e)-2.03e+02 drf cm/s 1.82e+03 Heating: 3.62e-28 Frac tot 7.56e-06
+ gra-ism10  *  DustTemp 1.10e+01 Pot Volt-2.14e+00 Chrg (e)-2.99e+02 drf cm/s 1.89e+03 Heating: 2.71e-28 Frac tot 5.66e-06
+ sil-ism01  *  DustTemp 1.94e+01 Pot Volt-2.25e+00 Chrg (e)-1.03e+01 drf cm/s 6.93e+02 Heating: 3.46e-27 Frac tot 7.23e-05
+ sil-ism02  *  DustTemp 1.83e+01 Pot Volt-2.25e+00 Chrg (e)-1.47e+01 drf cm/s 9.53e+02 Heating: 2.90e-27 Frac tot 6.06e-05
+ sil-ism03  *  DustTemp 1.73e+01 Pot Volt-2.23e+00 Chrg (e)-2.11e+01 drf cm/s 1.24e+03 Heating: 2.28e-27 Frac tot 4.77e-05
+ sil-ism04  *  DustTemp 1.64e+01 Pot Volt-2.22e+00 Chrg (e)-3.05e+01 drf cm/s 1.50e+03 Heating: 1.72e-27 Frac tot 3.59e-05
+ sil-ism05  *  DustTemp 1.55e+01 Pot Volt-2.21e+00 Chrg (e)-4.45e+01 drf cm/s 1.71e+03 Heating: 1.25e-27 Frac tot 2.60e-05
+ sil-ism06  *  DustTemp 1.46e+01 Pot Volt-2.20e+00 Chrg (e)-6.50e+01 drf cm/s 1.88e+03 Heating: 8.85e-28 Frac tot 1.85e-05
+ sil-ism07  *  DustTemp 1.38e+01 Pot Volt-2.19e+00 Chrg (e)-9.52e+01 drf cm/s 2.01e+03 Heating: 6.25e-28 Frac tot 1.31e-05
+ sil-ism08  *  DustTemp 1.30e+01 Pot Volt-2.18e+00 Chrg (e)-1.40e+02 drf cm/s 2.11e+03 Heating: 4.45e-28 Frac tot 9.30e-06
+ sil-ism09  *  DustTemp 1.22e+01 Pot Volt-2.17e+00 Chrg (e)-2.05e+02 drf cm/s 2.18e+03 Heating: 3.23e-28 Frac tot 6.74e-06
+ sil-ism10  *  DustTemp 1.14e+01 Pot Volt-2.16e+00 Chrg (e)-3.01e+02 drf cm/s 2.22e+03 Heating: 2.39e-28 Frac tot 4.99e-06
+ Lithium       0.00e+00 0.00e+00 0.00e+00 0.00e+00 Berylliu 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 sec ion: 1.12e-15
+ Carbon        1.95e-02 5.79e-01 4.00e-01 1.03e-03 3.02e-05 0.00e+00 0.00e+00 H2O+/O   0.00e+00 OH+/Otot 0.00e+00 Hex(tot) 0.00e+00
+ Nitrogen      3.07e-02 9.06e-01 6.29e-02 2.47e-04 1.26e-06 0.00e+00 0.00e+00 0.00e+00 O2/Ototl 0.00e+00 O2+/Otot 0.00e+00
+ Oxygen        9.20e-02 8.45e-01 6.32e-02 2.98e-04 3.15e-06 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Neon          2.76e-03 2.17e-01 7.77e-01 3.49e-03 4.12e-06 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Sodium        3.09e-05 1.83e-01 8.09e-01 7.20e-03 1.82e-04 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Magnesium     9.79e-03 1.51e-01 8.37e-01 2.81e-03 4.06e-06 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Silicon    0  3.96e-03 7.43e-01 2.34e-01 1.91e-02 3.39e-04 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Phosphorus 0  5.55e-04 7.95e-01 1.86e-01 1.78e-02 2.42e-04 1.34e-05 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Sulphur    0  9.62e-03 5.77e-01 4.10e-01 3.03e-03 1.88e-04 8.84e-06 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Chlorine   0  8.30e-04 6.39e-01 3.57e-01 3.07e-03 9.32e-05 4.32e-06 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Argon      0  2.51e-03 1.53e-01 8.42e-01 2.36e-03 1.21e-04 5.86e-06 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+ Iron       0  1.16e-04 3.58e-01 6.19e-01 2.26e-02 7.27e-04 5.93e-05 3.85e-07 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+
+
+
+ PROBLEM DISASTER
+ An assert has been thrown, this is bad.
+ Failed: wid == 0.
+ It happened in the file grains_qheat.cpp at line number 2047
+ This is iteration 1, nzone 127, fzone 127.10, lgSearch=F.
+
+
+
+           vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv 
+          > PROBLEM DISASTER PROBLEM DISASTER.      <
+          > Sorry, something bad has happened.      <
+          > Please post this on the Cloudy web site <
+          > discussion board at www.nublado.org     <
+          > Please send all following information:  <
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+
+ Cloudy version number is 23.01
+ Cloudy compiled on Jul  4 2024 in OS Apple MacOS using the clang++ 1500 compiler. Mode I32LP64, denormalized float: T double: T.
+ PRNG seed: 0xfff06f6963ce46ce
+
+    0 warnings,  0 cautions,  0 temperature failures.
+
+ Input commands follow:
+c ======================
+title my model grid -1.00 0.20 8.00
+set punch prefix "my_model_grid_-4_0.2_0.5_34"
+radius 10000 linear parsecs
+#distance = 15000.0 parsecs linear
+table SED "cloudy_continuum_model_34.sed"
+ionization parameter -4.00
+#luminosity 45
+hden 0.5
+grains ism
+metals deplete
+metals and grains 0.2
+element scale factor nitrogen 0.2
+no molecules
+no level2 lines
+no fine opacities
+atom h-like levels small
+atom he-like levels small
+COSMIC RAY BACKGROUND
+element limit off -8
+print line optical depth
+iterate to convergence
+save last linelist ".lin" "/Users/lupj/Cloudy/data/CloudyLines.dat" absolute column
+stop radius 20000 linear parsecs
+save last radius ".rad"
+save last continuum ".cont"
+save last physical conditions ".phy"
+save last overview ".ovr"
+save last heating ".heat"
+save last cooling ".cool"
+save last optical depth ".opd"
+save last element hydrogen ".ele_H"
+save last element helium ".ele_He"
+save last element carbon ".ele_C"
+save last element nitrogen ".ele_N"
+save last element oxygen ".ele_O"
+save last element argon ".ele_Ar"
+save last element neon ".ele_Ne"
+save last element sulphur ".ele_S"
+save last element chlorin ".ele_Cl"
+save last element iron ".ele_Fe"
+save last element silicon ".ele_Si"
+save last lines emissivity ".emis"
+H  1  4340.94A
+H  1  4861.36A
+H  1  6562.85A
+Ca B  5875.64A
+N  2  6583.45A
+O  1  6300.30A
+O  2  3726.03A
+O  2  3728.81A
+O  3  5006.84A
+BLND  4363.00A
+S  2  6716.44A
+S  2  6730.82A
+Cl 3  5517.71A
+Cl 3  5537.87A
+O  1  63.1679m
+O  1  145.495m
+C  2  157.636m
+He 2  4686.01A
+end of lines
+c ======================
+
+PRNG seed: 0xfff06f6963ce46ce
+
+Backtrace follows:
+
+1   cloudy.exe                          0x0000000104494e34 bad_assert::bad_assert(char const*, long, char const*) + 56
+2   cloudy.exe                          0x00000001045061c4 qheat(std::__1::vector<double, std::__1::allocator<double>>&, std::__1::vector<double, std::__1::allocator<double>>&, long*, unsigned long) + 14472
+3   cloudy.exe                          0x000000010450228c GrainMakeDiffuse() + 724
+4   cloudy.exe                          0x0000000104668b70 RT_diffuse() + 4788
+5   cloudy.exe                          0x000000010449a238 cloudy() + 536
+6   cloudy.exe                          0x00000001044950a0 cdDrive() + 388
+7   cloudy.exe                          0x0000000104459630 cdMain(int, char const**) + 2916
+8   cloudy.exe                          0x0000000104458078 main + 1384
+9   dyld                                0x0000000192103f28 start + 2236
+
