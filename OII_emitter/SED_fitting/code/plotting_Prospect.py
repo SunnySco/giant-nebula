@@ -1,83 +1,162 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import os
 mpl.rcParams['text.usetex'] = True
 from prospect.io import read_results as reader
-from prospect.plotting.sfh import parametric_sfr
+from prospect.plotting.sfh import parametric_sfr, sfh_quantiles, params_to_sfh
+from prospect.models.transforms import zfrac_to_sfrac, zfrac_to_masses, logsfr_ratios_to_sfrs
+
+
+def get_agediff(out):
+    agebins = 10**[dic['init'] for dic in out['model_params'] if dic['name']=='agebins'][0]
+    return agebins, np.diff(agebins).flatten()
+
+def get_SFR_perbin(out, SFH): #return (nsamples, nbin)
+    if 'logM' in SFH:
+        label_mask = np.array(['mass_' in label_ for label_ in out['theta_labels']])
+        samples_masses = out['chain'][:, label_mask]
+        return samples_masses/get_agediff(out)[1]
+    elif 'continuity' in SFH:
+        agebins = get_agediff(out)[0]
+        label_mask = np.array(['logsfr_ratios_' in label_ for label_ in out['theta_labels']])
+        label_mask_ = np.array(['logmass' in label_ for label_ in out['theta_labels']])
+        samples_sratios = out['chain'][:, label_mask]
+        samples_logmass = out['chain'][:, label_mask_]
+        samples_sfrs = np.asarray([logsfr_ratios_to_sfrs(samples_logmass[i], samples_sratios[i], np.log10(agebins)) for i in range(len(samples_sratios))])
+        return samples_sfrs    
+    elif 'dirichlet' in SFH:
+        agebins = get_agediff(out)[0]
+        label_mask = np.array(['z_fraction_' in label_ for label_ in out['theta_labels']])
+        label_mask_ = np.array(['total_mass' in label_ for label_ in out['theta_labels']])
+        samples_zfrac = out['chain'][:, label_mask]
+        samples_total_mass = out['chain'][:, label_mask_]
+        #samples_sfrac = np.asarray([zfrac_to_sfrac(samples_zfrac[i]) for i in range(len(samples_zfrac))])
+        samples_masses = np.asarray([zfrac_to_masses(samples_total_mass[i], samples_zfrac[i], np.log10(agebins)) for i in range(len(samples_zfrac))])
+        return samples_masses/get_agediff(out)[1]
+    else:
+        raise ValueError('SFH not recognized')
+
+def get_samples_1d(out, label):
+    label_mask = np.atleast_1d(out['theta_labels'])==label
+    if not np.any(label_mask) and label=='mass': 
+        label_mask = np.array(['mass_' in label_ for label_ in out['theta_labels']]) #for logM SFH
+        samples_1d = np.sum((out['chain'])[:, label_mask], axis=1)#the sum of mass 
+        if not np.any(label_mask):
+            label_mask = np.array(['total_mass' in label_ for label_ in out['theta_labels']]) #for dirichlet SFH
+            samples_1d = out['chain'][:, label_mask].flatten()
+            if not np.any(label_mask):
+                label_mask = np.array(['logmass' in label_ for label_ in out['theta_labels']]) #for continuity SFH
+                samples_1d = 10**out['chain'][:, label_mask].flatten()
+    else:
+        samples_1d = (out['chain'])[:, label_mask][:, 0]
+    return samples_1d
+
+def get_percentile(out, label, samples_1d=None): #see prospect.plotting.corner.quantile
+    q = np.atleast_1d([0.16, 0.5, 0.84])
+    if label:
+        label_mask = np.atleast_1d(out['theta_labels'])==label
+        if not np.any(label_mask) and label=='mass': #don't have mass in the params but want total mass (non-param SFH)
+            label_mask = np.array(['mass_' in label_ for label_ in out['theta_labels']]) #for logM and continuity SFH
+            samples_1d = np.sum((out['chain'])[:, label_mask], axis=1)#the sum of mass                
+            if not np.any(label_mask): #don't have mass_ but want total mass 
+                label_mask = np.array(['total_mass' in label_ for label_ in out['theta_labels']]) # for dirichlet SFH
+                samples_1d = out['chain'][:, label_mask].flatten()
+        elif not np.any(label_mask) and label=='zfrac_to_mass':
+            agebins = get_agediff(out)[0]
+            label_mask = np.array(['z_fraction_' in label_ for label_ in out['theta_labels']])
+            label_mask_ = np.array(['total_mass' in label_ for label_ in out['theta_labels']])
+            samples_zfrac = out['chain'][:, label_mask]
+            samples_total_mass = out['chain'][:, label_mask_]
+            samples_masses = np.asarray([zfrac_to_masses(samples_total_mass[i], samples_zfrac[i], np.log10(agebins)) for i in range(len(samples_zfrac))])
+            samples_1d = samples_masses[:, 0]
+        else:
+            samples_1d = (out['chain'])[:, label_mask][:, 0]
+        weights_1d = np.atleast_1d(out['weights'])
+        idx = np.argsort(samples_1d)  # sort samples
+        sw = weights_1d[idx]  # sort weights
+        cdf = np.cumsum(sw)[:-1]  # compute CDF
+        cdf /= cdf[-1]  # normalize CDF
+        cdf = np.append(0, cdf)  # ensure proper span
+        quantiles = np.interp(q, cdf, samples_1d[idx]).tolist()
+    elif np.any(samples_1d):
+        weights_1d = np.atleast_1d(out['weights'])
+        idx = np.argsort(samples_1d)  # sort samples
+        sw = weights_1d[idx]  # sort weights
+        cdf = np.cumsum(sw)[:-1]  # compute CDF
+        cdf /= cdf[-1]  # normalize CDF
+        cdf = np.append(0, cdf)  # ensure proper span
+        quantiles = np.interp(q, cdf, samples_1d[idx]).tolist()    
+    else:
+        quantiles = [[],[],[]]
+        weights_1d = np.atleast_1d(out['weights'])
+        for parames_vector in out['chain'].T:
+            idx = np.argsort(parames_vector)
+            sw = weights_1d[idx]
+            cdf = np.cumsum(sw)[:-1]
+            cdf /= cdf[-1]
+            cdf = np.append(0, cdf)
+            quantiles_ = np.interp(q, cdf, parames_vector[idx]).tolist()
+            for i in range(3):
+                quantiles[i].append(quantiles_[i])
+    return quantiles
+
+def if_parametric_SFH(SFH_model):
+    if SFH_model in ['delayed', 'exponential', 'delayed_agn', 'exponential_agn']:
+        return True
+    else:
+        return False
+
+def calc_stellar_mass(res, obs, model):
+    '''
+    Question remained:
+    Can the median stellar mass and the mfrac calculated by all median parameters multiply together?
+    Or should I only use the median stellar mass sample to get the mfrac?
+    '''
+    sps = reader.get_sps(res)
+    total_stellar_mass_1d = get_samples_1d(res, 'mass')
+    samples_2d = []
+    for label in res['theta_labels']:
+        samples_2d.append(get_samples_1d(res, label))
+    samples_2d = np.array(samples_2d).T
+    mfrac_1d = [model.predict(vector, obs=obs, sps=sps)[2] for vector in samples_2d]
+    mfrac_1d = np.array(mfrac_1d)
+    surviving_stellar_mass_1d = total_stellar_mass_1d * mfrac_1d
+    return total_stellar_mass_1d, surviving_stellar_mass_1d
+
+def calc_recent_SFR(out, obs, model, SFH_model, surviving_stellar_mass_1d):
+    if if_parametric_SFH(SFH_model):
+        samples_tau, samples_tage, samples_mass = [get_samples_1d(out, label) for label in ['tau', 'tage', 'mass']]
+        params = dict(tage=samples_tage, tau=samples_tau, mass=samples_mass)
+        if 'exponential' in SFH_model:
+            params['sfh'] = 1
+        elif 'delayed' in SFH_model:
+            params['sfh'] = 4
+        else:
+            raise ValueError('SFH not recognized')
+        _, sfrs, _ = params_to_sfh(params, time=np.array([0])) #(nsamples, 1)
+        SFR_1d = sfrs.flatten()
+    else:
+        SFR_1d = get_SFR_perbin(out, SFH_model)[:, 0] #only the recent bin
+    sSFR_1d = SFR_1d / surviving_stellar_mass_1d
+    SFR_quantiles = get_percentile(out, label=None, samples_1d=SFR_1d)
+    sSFR_quantiles = get_percentile(out, label=None, samples_1d=sSFR_1d)
+    return SFR_quantiles, sSFR_quantiles
 
 def results_plot(versions=['homo_ellipse_v1', 'space_homo_downleft', 'space_homo_upright'], labels=["formed_mass", "SFR", "sSFR", "dust:Av"], SFH_models=['delayed', 'binned'], pipes_results=None):
     path = '/home/lupengjun/OII_emitter/SED_fitting/output/prospect_results/'
-    def get_percentile(out, label): #see prospect.plotting.corner.quantile
-        q = np.atleast_1d([0.16, 0.5, 0.84])
-        if label:
-            label_mask = np.atleast_1d(out['theta_labels'])==label
-            if not np.any(label_mask) and label=='mass':
-                label_mask = np.array(['mass' in label_ for label_ in out['theta_labels']])
-                samples_1d = np.sum((out['chain'])[:, label_mask], axis=1)#the sum of mass
-            else:
-                samples_1d = (out['chain'])[:, label_mask][:, 0]
-            weights_1d = np.atleast_1d(out['weights'])
-            idx = np.argsort(samples_1d)  # sort samples
-            sw = weights_1d[idx]  # sort weights
-            cdf = np.cumsum(sw)[:-1]  # compute CDF
-            cdf /= cdf[-1]  # normalize CDF
-            cdf = np.append(0, cdf)  # ensure proper span
-            quantiles = np.interp(q, cdf, samples_1d[idx]).tolist()
-        else:
-            quantiles = [[],[],[]]
-            weights_1d = np.atleast_1d(out['weights'])
-            for parames_vector in out['chain'].T:
-                idx = np.argsort(parames_vector)
-                sw = weights_1d[idx]
-                cdf = np.cumsum(sw)[:-1]
-                cdf /= cdf[-1]
-                cdf = np.append(0, cdf)
-                quantiles_ = np.interp(q, cdf, parames_vector[idx]).tolist()
-                for i in range(3):
-                    quantiles[i].append(quantiles_[i])
-        return quantiles
-    
-    def if_parametric_SFH(SFH_model):
-        if SFH_model in ['delayed', 'exponential']:
-            return True
-        else:
-            return False
-
-    def calc_stellar_mass(res, obs, model):
-        '''
-        Question remained:
-        Can the median stellar mass and the mfrac calculated by all median parameters multiply together?
-        Or should I only use the median stellar mass sample to get the mfrac?
-        '''
-        sps = reader.get_sps(res)
-        total_stellar_mass = get_percentile(res, 'mass')
-        mfrac = [model.predict(vector, obs=obs, sps=sps)[2] for vector in get_percentile(res, None)]
-        surviving_stellar_mass = [frac*mass for frac, mass in zip(mfrac, total_stellar_mass)]
-        return total_stellar_mass, surviving_stellar_mass
-    
-    def calc_SFR(out, SFH_model, surviving_stellar_mass):
-        if if_parametric_SFH(SFH_model):
-            SFR = [parametric_sfr(times=np.array([0]), mass=mass, tage=tage, tau=tau)[0] 
-            for mass, tage, tau in zip(get_percentile(out, 'mass'), get_percentile(out, 'tage'), get_percentile(out, 'tau'))]
-        else:
-            agebin = 10**out['model'].params['agebins'][-1, 1] - 10**out['model'].params['agebins'][-1, 0]
-            for key in out['theta_labels']:
-                if 'mass' in key:
-                    mass_key = key # get last mass key
-            SFR = [mass/agebin for mass in get_percentile(out, mass_key)]
-        sSFR = [sfr/mass for sfr, mass in zip(SFR, surviving_stellar_mass)]
-        return SFR, sSFR
-
     plt.rcParams.update({'font.size': 12})
     nicknames = {'homo_ellipse_v1': 'Galaxy',
                 'space_homo_ellipse_v1': 'HST+JWST Galaxy',
                 'space_homo_downleft': 'Arm',
-                'space_homo_upright': 'Bulge'
+                'space_homo_upright': 'Bulge',
+                'BCG': 'BCG'
                 }
     colors = {'homo_ellipse_v1': 'tab:blue',
                 'space_homo_ellipse_v1': 'tab:purple',
                 'space_homo_downleft': 'tab:green',
-                'space_homo_upright': 'tab:orange'
+                'space_homo_upright': 'tab:orange',
+                'BCG': 'tab:blue',
                 }
 
     # Creating subplots
@@ -94,8 +173,15 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_downleft', 'space_homo
         for SFH_model in SFH_models:
             print(f'----{version}----{SFH_model}----')
             out, out_obs, out_model = reader.results_from(path+f'{version}_{SFH_model}.h5')
-            total_stellar_mass, surviving_stellar_mass = calc_stellar_mass(out, out_obs, out_model)
-            SFR, sSFR = calc_SFR(out, SFH_model, surviving_stellar_mass)
+            if 'formed_mass' in labels or 'surviving_mass' in labels or 'SFR' in labels or 'sSFR' in labels:
+                if not os.path.exists(f'./prospect_results/{version}_{SFH_model}_stellar_mass_1d.txt'):
+                    total_stellar_mass_1d, surviving_stellar_mass_1d = calc_stellar_mass(out, out_obs, out_model)
+                    np.savetxt(f'./prospect_results/{version}_{SFH_model}_stellar_mass_1d.txt', [total_stellar_mass_1d, surviving_stellar_mass_1d])
+                else:
+                    total_stellar_mass_1d, surviving_stellar_mass_1d = np.loadtxt(f'./prospect_results/{version}_{SFH_model}_stellar_mass_1d.txt')
+                SFR, sSFR = calc_recent_SFR(out, out_obs, out_model, SFH_model, surviving_stellar_mass_1d)
+                total_stellar_mass = get_percentile(out, label=None, samples_1d=total_stellar_mass_1d)
+                surviving_stellar_mass = get_percentile(out, label=None, samples_1d=surviving_stellar_mass_1d)
             for label in labels: 
                 if label == 'SFR': #what does bagpipes do?
                     results_dic[label][SFH_model] = SFR
@@ -107,7 +193,9 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_downleft', 'space_homo
                     results_dic[label][SFH_model] = surviving_stellar_mass
                 elif label == 'dust:Av':
                     results_dic[label][SFH_model] = get_percentile(out, 'dust2')
-        for label, ax in zip(labels, axs.flatten()):
+                else:
+                    results_dic[label][SFH_model] = get_percentile(out, label)
+        for label, ax in zip(labels, np.array([axs]).flatten()):
             version_key = [key for key in nicknames.keys() if key in version ]
             # Plotting
             x = [key for key in results_dic[label].keys()]
@@ -123,8 +211,13 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_downleft', 'space_homo
         versions_results_dic[version] = results_dic
         #versions_samples_dic[version] = samples_dic
     # General plot adjustments
-    axs.flatten()[0].legend()
+    np.array([axs]).flatten()[0].legend()
     plt.xlabel('SFH Models')
     plt.tight_layout()
     plt.show()
     return versions_results_dic #, versions_samples_dic
+
+if __name__ == '__main__':
+    # results_plot(versions=['homo_ellipse_v1_dered', 'space_homo_downleft_dered', 'space_homo_upright_dered'], SFH_models=['exponential_agn', 'delayed_agn', 'logM_agn', 'continuity_agn'], labels=["surviving_mass", "formed_mass", "SFR", "sSFR", "dust:Av"])
+    # results_plot(versions=['homo_ellipse_v1_dered', 'space_homo_upright_dered'], SFH_models=['exponential_agn', 'delayed_agn', 'logM_agn', 'continuity_agn','dirichlet_agn'], labels=["surviving_mass", "formed_mass", "SFR", "sSFR", "dust:Av"])
+    results_plot(versions=['space_homo_upright_dered'], SFH_models=['delayed', 'logM',], labels=["formed_mass", "surviving_mass", "SFR", "sSFR", "dust:Av"])

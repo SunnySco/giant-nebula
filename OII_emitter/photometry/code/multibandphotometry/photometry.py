@@ -22,6 +22,7 @@ from astropy.stats import sigma_clipped_stats
 from astropy.convolution import convolve, convolve_fft
 
 #source position: 150.15949, 2.1914772
+#nearby galaxy position: 150.1589554, 2.1912381
 #nebula position:
 #0923 to do list: background source detection and rms random aperture and arrange parameters
 class MultiBandPhotometry:
@@ -150,7 +151,7 @@ class MultiBandPhotometry:
         bkg_map, rms_map, source_mask = self.load_background(telescope_band, regenerate=bkg_regenerate)
         data_bkgsub = data-bkg_map
         if self.psf_homo and telescope_band.split('_')[-1]!=self.psf_homo:
-            kernel = self.__load_psf_kernel(telescope_band, self.psf_homo)
+            kernel = self.load_psf_kernel(telescope_band, self.psf_homo)
             data_bkgsub = convolve_fft(data_bkgsub, kernel, normalize_kernel=True, allow_huge=True)
             print(f'{telescope_band} convolved to target psf!')
         if error_method == 'global':
@@ -191,16 +192,7 @@ class MultiBandPhotometry:
         aperture: Use a empirical ellptical aperture that can conclude all the source to measure all bands
         galfit: Use galfit to fit morphology at JWST F150W. Change amplitude to measure the flux at each band.
         '''
-        if method == 'small':
-            aperture = SkyCircularAperture(self.source_position, r=0.4*u.arcsec)
-        elif method == 'ellipse':
-            aperture = SkyEllipticalAperture(self.source_position, a=1.2609045*u.arcsec, b=0.95159205*u.arcsec, theta=232*u.degree)
-        elif method == 'upright':
-            aperture = SkyCircularAperture(SkyCoord(150.1594161, 2.1915121, unit='deg'), r=0.3*u.arcsec)
-        elif method == 'downleft':
-            aperture = SkyCircularAperture(SkyCoord(150.1595557, 2.1914293, unit='deg'), r=0.3*u.arcsec)
-        else:
-            raise ValueError('method must be small or ellipse or upright or downleft!')
+        aperture = self.load_aperture(method)
         fig = plt.figure(figsize=(12, 48))
         gs = fig.add_gridspec(15, 3,)
         i = -1
@@ -333,5 +325,20 @@ class MultiBandPhotometry:
             psf = fits.getdata(f'/home/lupengjun/OII_emitter/photometry/output/psfmodels/{telescope_band}_SEcat.psf', 1)['PSF_MASK'][0][0].astype(np.float64) #field-constant psf only have one image
         
         return psf
-
+    def load_aperture(self, method):
+        if method == 'small':
+            aperture = SkyCircularAperture(self.source_position, r=0.4*u.arcsec)
+        elif method == 'ellipse':
+            aperture = SkyEllipticalAperture(self.source_position, a=1.2609045*u.arcsec, b=0.95159205*u.arcsec, theta=232*u.degree)
+        elif method == 'upright':
+            aperture = SkyCircularAperture(SkyCoord(150.1594161, 2.1915121, unit='deg'), r=0.3*u.arcsec)
+        elif method == 'downleft':
+            aperture = SkyCircularAperture(SkyCoord(150.1595557, 2.1914293, unit='deg'), r=0.3*u.arcsec)
+        elif method == 'upright-new':
+            aperture = SkyCircularAperture(SkyCoord(150.1594792, 2.1915165, unit='deg'), r=0.3*u.arcsec)
+        elif method == 'nearby':
+            aperture = SkyCircularAperture(self.source_position, r=0.833*u.arcsec)
+        else:
+            raise ValueError('method must be small or ellipse or upright or downleft!')
+        return aperture
     

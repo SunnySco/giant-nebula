@@ -83,14 +83,19 @@ def adjust_agebins_with_zred(agelims, zred):
 # Model Definition
 # --------------
 
-def build_model(z=0.924, sfh_type='delayed', nbin=8, add_agn=False, **extras):
+def build_model(z, sfh_type='delayed', nbin=8, add_agn=False, **extras):
     """
     """
     from prospect.models.templates import TemplateLibrary
-    from prospect.models.templates import adjust_dirichlet_agebins
+    from prospect.models.templates import adjust_dirichlet_agebins, adjust_continuity_agebins
     from prospect.models import priors
     from prospect.models import SpecModel
     from prospect.models import transforms
+    
+    if z != 0:
+        z_ = z
+    else:
+        z_ = 0.924
     
     #parametric SFH
     if 'delayed' in sfh_type:
@@ -128,24 +133,17 @@ def build_model(z=0.924, sfh_type='delayed', nbin=8, add_agn=False, **extras):
         mass_min = np.zeros(nbin)+1e5
         mass_max = np.zeros(nbin)+1e11
         model_params['agebins'] = {'N': nbin, 'isfree': False,
-                        'init': adjust_agebins_with_zred(get_agebins(nbin)[0], z)[1],
+                        'init': adjust_agebins_with_zred(get_agebins(nbin)[0], z_)[1],
                         'units': 'log(yr)'} 
         model_params["mass"]    = {'N': nbin, 'isfree': True, 'units': r'M$_\odot$',
                                     'init': np.zeros(nbin) + 1e7,
                                     'prior': priors.LogUniform(mini=mass_min, maxi=mass_max)}
     elif sfh_type == 'continuity':
         model_params = TemplateLibrary['continuity_sfh']
-        mass_min = np.zeros(nbin)+1e5
-        mass_max = np.zeros(nbin)+1e11
-        model_params['agebins'] = {'N': nbin, 'isfree': False,
-                        'init': adjust_agebins_with_zred(get_agebins(nbin)[0], z)[1],
-                        'units': 'log(yr)'}
-        model_params["mass"]    = {'N': nbin, 'isfree': True, 'units': r'M$_\odot$',
-                                    'init': np.zeros(nbin) + 1e7,
-                                    'prior': priors.LogUniform(mini=mass_min, maxi=mass_max)}
+        adjust_continuity_agebins(model_params, nbins=nbin, agebins=adjust_agebins_with_zred(get_agebins(nbin)[0], z_)[1])
     elif sfh_type == 'dirichlet':
         model_params = TemplateLibrary['dirichlet_sfh']
-        adjust_dirichlet_agebins(model_params, agelims=adjust_agebins_with_zred(get_agebins(nbin)[0], z)[0])
+        adjust_dirichlet_agebins(model_params, agelims=adjust_agebins_with_zred(get_agebins(nbin)[0], z_)[0])
     else:
         raise ValueError('SFH type not recognized')
     #nebular emission with logU varies
@@ -160,8 +158,13 @@ def build_model(z=0.924, sfh_type='delayed', nbin=8, add_agn=False, **extras):
     #model_params['dust2']['prior'] = priors.TopHat(mini=0., maxi=5.) #uniform prior    dust["Av"] = (0., 5.)                     # Vary Av between 0 and 5 magnitudes
     model_params['dust2']['prior'] = priors.TopHat(mini=0., maxi=6.)
     #fixed spectroscopy redshift
-    model_params["zred"]["init"] = z
-    model_params["zred"]["isfree"] = False
+    if z != 0:
+        model_params["zred"]["init"] = z
+        model_params["zred"]["isfree"] = False
+    else:
+        model_params["zred"]["init"] = 0.9
+        model_params["zred"]["prior"] = priors.TopHat(mini=0.8, maxi=1.0)
+        model_params["zred"]["isfree"] = True
     ###tau, mass, metalicity prior need to be tuned###
     #model_params['logzsol']['prior'] = priors.TopHat(mini=-1, maxi=0.5)#    delayed["metallicity"] = (0., 2.5)
     model_params['logzsol']['prior'] = priors.TopHat(mini=-2, maxi=0.6)
@@ -179,7 +182,7 @@ def build_model(z=0.924, sfh_type='delayed', nbin=8, add_agn=False, **extras):
 # Observational Data
 # --------------
 
-def build_obs(version, z=0.924, **kwargs):
+def build_obs(version, z, **kwargs):
     """
     :returns obs:
         Dictionary of observational data.
@@ -205,8 +208,12 @@ def build_obs(version, z=0.924, **kwargs):
     print(filter_list)
     filters = load_filters(filter_list) #use sedpy to load filters, but change the source code to direct the filter path to mine
     #construct obs dictionary
-    obs = dict(wavelength=None, spectrum=None, unc=None, redshift=z, # redshift from z_spec
-           maggies=maggies, maggies_unc=maggerr, filters=filters) #only photometry
+    if z != 0:
+        obs = dict(wavelength=None, spectrum=None, unc=None, redshift=z, # redshift from z_spec
+            maggies=maggies, maggies_unc=maggerr, filters=filters) #only photometry
+    else:
+        obs = dict(wavelength=None, spectrum=None, unc=None,# redshift from z_spec
+            maggies=maggies, maggies_unc=maggerr, filters=filters) #only photometry
     obs = fix_obs(obs)
 
     return obs
@@ -255,6 +262,8 @@ if __name__ == '__main__':
                         help="number of bins for non-parametric sfh")
     parser.add_argument('--add_agn', type=bool, default=False,
                         help="whether add agn continuum")
+    parser.add_argument('--z', type=float, default=0.924,
+                    help="redshift")
     args = parser.parse_args()
     run_params = vars(args)
 

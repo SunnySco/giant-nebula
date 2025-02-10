@@ -36,7 +36,7 @@ def load_SFH_model(mode):
     #delayed Tau-model
     delayed = {}                         # Delayed Tau model t*e^-(t/tau)
     delayed["age"] = (0.1, 15.)           # Time since SF began: Gyr
-    delayed["tau"] = (0.3, 10.)           # Timescale of decrease: Gyr
+    delayed["tau"] = (0.3, 15.)           # Timescale of decrease: Gyr
     delayed["massformed"] = (1., 15.)
     delayed["metallicity"] = (0., 2.5)
 
@@ -78,13 +78,14 @@ def load_fit_instructions(SFH_model, add_agn=False):
     agn['betalam'] = (-0.5, 1.5) #Power law slope of the AGN continuum at lambda > 5000A
     agn['hanorm'] = (0., 2.5*10**(-17)) #Halpha luminosity erg/s/cm^2
     agn['sigma'] = (1000., 5000.) #Velocity dispersion km/s
-    agn['f5100A'] = (0., 10**(-19)) #5100A luminosity erg/s/cm^2
+    agn['f5100A'] = (0., 10**(-19)) #5100A luminosity erg/s/cm^2/A
 
     fit_instructions = {}                     # The fit instructions dictionary
-    fit_instructions["redshift"] = 0.924  # Vary observed redshift from 0.9 to 1 #spetrum redshift=0.924
+    #fit_instructions["redshift"] = 0.924  # Vary observed redshift from 0.9 to 1 #spetrum redshift=0.924
+    fit_instructions["redshift"] = (0.006, 0.5)  # Zangstu redshift range
     fit_instructions[SFH_model] = load_SFH_model(SFH_model)   
     fit_instructions["dust"] = dust
-    fit_instructions["nebular"] = nebular #add nebular emission
+    # fit_instructions["nebular"] = nebular #add nebular emission
     if add_agn: fit_instructions["agn"] = agn
     return fit_instructions
 
@@ -178,7 +179,7 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_ellipse_v1', 'space_ho
                 new_label = get_diclabel(label)
                 results_dic[new_label][SFH_model] = np.percentile(fit.posterior.samples[label], [50, 16, 84])     
             #samples_dic[SFH_model] = fit.posterior.samples
-        for label, ax in zip(labels, axs.flatten()):
+        for label, ax in zip(labels, np.array([axs]).flatten()):
             new_label = get_diclabel(label)
             # Plotting
             x = [key for key in results_dic[new_label].keys()]
@@ -186,11 +187,14 @@ def results_plot(versions=['homo_ellipse_v1', 'space_homo_ellipse_v1', 'space_ho
             y1684 = np.array([value[1:] for value in results_dic[new_label].values()]).T
             ax.errorbar(x, y50, np.abs(y1684-y50), fmt='o', capsize=5, label=nicknames[version])
             ax.set_ylabel(new_label)
-            ax.set_ylim(*ylims[label])
+            try:
+                ax.set_ylim(*ylims[label])
+            except:
+                pass
         versions_results_dic[version] = results_dic
         #versions_samples_dic[version] = samples_dic
     # General plot adjustments
-    axs.flatten()[0].legend()
+    np.array([axs]).flatten()[0].legend()
     plt.xlabel('SFH Models')
     plt.tight_layout()
     plt.show()
@@ -219,7 +223,8 @@ if __name__ == '__main__':
         add_agn = False
     print("Add AGN?", add_agn)
 
-    SFH_models = ['exponential', 'delayed', 'lognormal', 'dblplaw']
+    # SFH_models = ['exponential', 'delayed', 'lognormal', 'dblplaw']
+    SFH_models = ['delayed']
     for SFH_model in SFH_models:
         SED_fitting(version, SFH_model, add_agn=add_agn)
     print('Done!')

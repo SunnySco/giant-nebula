@@ -1,0 +1,63 @@
+####################################
+title my_model_grid_-1.00_0.20_8.00
+####################################
+set punch prefix "my_model_grid_-2_1_0_34"
+radius 10000 linear parsecs
+#distance = 15000.0 parsecs linear
+table SED "cloudy_continuum_model_34.sed"
+ionization parameter -2.00
+#luminosity 45
+hden 0
+grains ism
+metals deplete
+metals and grains 1
+element scale factor nitrogen 0.2
+no molecules
+no level2 lines
+no fine opacities
+atom h-like levels small
+atom he-like levels small
+COSMIC RAY BACKGROUND
+element limit off -8
+print line optical depth
+iterate to convergence
+save last linelist ".lin" "/Users/lupj/Cloudy/data/CloudyLines.dat" absolute column
+stop radius 20000 linear parsecs
+save last radius ".rad"
+save last continuum ".cont"
+save last physical conditions ".phy"
+save last overview ".ovr"
+save last heating ".heat"
+save last cooling ".cool"
+save last optical depth ".opd"
+save last element hydrogen ".ele_H"
+save last element helium ".ele_He"
+save last element carbon ".ele_C"
+save last element nitrogen ".ele_N"
+save last element oxygen ".ele_O"
+save last element argon ".ele_Ar"
+save last element neon ".ele_Ne"
+save last element sulphur ".ele_S"
+save last element chlorin ".ele_Cl"
+save last element iron ".ele_Fe"
+save last element silicon ".ele_Si"
+save last lines emissivity ".emis"
+H  1  4340.94A
+H  1  4861.36A
+H  1  6562.85A
+Ca B  5875.64A
+N  2  6583.45A
+O  1  6300.30A
+O  2  3726.03A
+O  2  3728.81A
+O  3  5006.84A
+BLND  4363.00A
+S  2  6716.44A
+S  2  6730.82A
+Cl 3  5517.71A
+Cl 3  5537.87A
+O  1  63.1679m
+O  1  145.495m
+C  2  157.636m
+He 2  4686.01A
+end of lines
